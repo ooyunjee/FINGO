@@ -1,0 +1,67 @@
+@mixin reset-img {
+  vertical-align: top;
+  border: 0;
+}
+
+@mixin reset-list {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin reset-box-model {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-anchor {
+  display: inline;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin reset-button {
+  cursor: pointer;
+  border: 0;
+}
+
+@mixin box-sizing($origin) {
+  -webkit-box-sizing: $origin;
+  -moz-box-sizing: $origin;
+  // -o-box-sizing: $origin;
+  -ms-box-sizing: $origin;
+  box-sizing: $origin;
+}
+
+@mixin reset-input {
+  border: 0;
+}
+
+@mixin flexbox($direction: row, $justify: null, $align-items: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align-items;
+}
+
+@mixin transition {
+
+}
+
+@mixin position($position, $args) {
+	position: $position;
+
+	@if $args != null {
+		@each $dir in top, left, bottom, right, z-index {
+			$i: index($args, $dir);
+
+			@if $i {
+				#{$dir}: nth($args, $i + 1);
+			}
+		}
+	}
+}
