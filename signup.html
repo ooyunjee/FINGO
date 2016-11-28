@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FINGO - Sign up</title>
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo container"><img src="img/icon-fingo.svg" alt="" /></h1>
+  </header>
+  <main>
+    <div class="sign-up container">
+      <h1>회원가입</h1>
+      <form>
+        <label for="email" class="a11y">이메일 주소</label>
+        <input id="email" type="email" title="회원가입 이메일 주소 입력" placeholder="이메일 주소" required>
+        <label for="name" class="a11y">이름</label>
+        <input id="name" type="text" title="회원가입 이름 입력" placeholder="이름" required>
+        <label for="password" class="a11y">비밀번호 6자 이상</label>
+        <input id="password" type="password" title="회원가입 비밀번호 입력" placeholder="비밀번호(6자 이상)" required>
+        <input id="policy" type="checkbox" required>
+        <label for="policy" class="sign-up-policy">FINGO 서비스 이용 약관에 동의합니다.</label>
+        <button type="submit">등록하기</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <a href="#" title="홈으로" class="footer-logo"><img src="img/icon-footer-logo.png" alt="" /></a>
+      <div class="footer-copyright">
+        <p><a href="#">핑고 서비스 이용약관</a> | <a href="#">개인정보 취급방침 </a></p>
+        <span>Copyright © 2016 by Fingo - JiEun, YunJee</span>
+      </div>
+      <div class="footer-sns-group">
+        <a href="#" class="footer-sns-facebook" aria-label="핑고 페이스북 페이지로 이동" title="핑고 페이스북 페이지로 이동"><img src="img/icon-facebook.png" alt="" /></a>
+        <a href="#" class="footer-sns-twitter" aria-label="핑고 트위터로 이동" title="핑고 트위터로 이동"><img src="img/icon-twitter.png" alt="" /></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
