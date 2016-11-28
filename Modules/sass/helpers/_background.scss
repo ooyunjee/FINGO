@@ -1,0 +1,19 @@
+// --------------------------------
+// background 믹스인
+// --------------------------------
+
+@mixin background($args) {
+	@if $args != null {
+		@each $dir in color, image, repeat, size, position {
+			$i: index($args, $dir);
+
+			@if $i {
+        @if $dir == position {
+          background-#{$dir}: nth($args, $i + 1) nth($args, $i + 2);
+        } @else {
+          background-#{$dir}: nth($args, $i + 1);
+        }
+			}
+		}
+	}
+}
