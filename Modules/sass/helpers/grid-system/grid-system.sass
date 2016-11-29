@@ -1,0 +1,85 @@
+@import "grid-system-function"
+
+%fl
+  float: left
+
+%position-relative
+  position: relative
+
+%isolate-margin-right
+  margin-right: -100%
+
+$column-base-width: 120px
+$column-count: 16
+// $gutter-base-width: 12px
+$page-width: ($column-base-width + ($gutter-base-width * 2)) * $column-count
+$fluid: false
+
+$i: 1
+
+.container
+  margin-left: auto
+  margin-right: auto
+
+  &.adaptive
+    width: $page-width
+    background: #fff
+
+    &.show-grid
+      position: relative
+
+      &::before
+        content: ''
+        position: absolute
+        z-index: 10000
+        top: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(-90deg, hsla(0, 0%, 85%, 0.3) 50%, hsla(0, 0%, 61%, 0.75) 50%)
+        background-size: ($column-base-width * 2) 1px
+
+/* row */
+.row
+  &::after
+    content: ''
+    display: block
+    clear: both
+
+
+/* column */
+@for $i from 1 through $column-count
+  .col-#{$i}
+    @extend %fl
+    width: column($i)
+
+/* push */
+@for $i from 1 through $column-count
+  .push-#{$i}
+    @extend %position-relative
+    left: push_pull($i)
+
+/* pull */
+@for $i from 1 through $column-count
+  .pull-#{$i}
+    @extend %position-relative
+    right: push_pull($i)
+
+/* prefix */
+@for $i from 1 through $column-count
+  .prefix-#{$i}
+    margin-left: push_pull($i)
+
+/* suffix */
+@for $i from 1 through $column-count
+  .suffix-#{$i}
+    margin-right: push_pull($i)
+
+/* isolate */
+@for $i from 1 through $column-count
+  .row
+    &.isolate
+      .col-#{$i}
+        @extend %isolate-margin-right
+      .order-#{$i}
+        // @debug isolate($i)
+        margin-left: isolate($i)
