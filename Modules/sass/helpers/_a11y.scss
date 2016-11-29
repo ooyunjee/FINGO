@@ -5,6 +5,11 @@
 }
 
 // 스크린리더에서는 읽기 가능
+%a11y {
+  position: absolute;
+  top: -9999em;
+}
+
 %a11y-hidden {
 	overflow: hidden;
 	position: absolute;
