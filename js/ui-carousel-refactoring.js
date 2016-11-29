@@ -18,6 +18,7 @@
     'height': 390,
     'margin': 20,
     'count': 1,
+    'row': 1,
     'infinite': true,
     'index': 0
   };
@@ -32,7 +33,8 @@
     this.settings = $.extend({}, defaults, options);
 
     // var settings = this.settings;
-    this.infinite = this.settings.infinite;
+    this.carousel_infinite = this.settings.infinite;
+    this.carousel_row = this.settings.row;
 
     this.setCarouselRatio(this.settings.width, this.settings.height);
     this.carousel_count                  = this.settings.count;
@@ -146,6 +148,7 @@
 
       // Set carousel one tab mask width
       this.carousel_one_tab_mask_width = ($tabpanel.width() + this.carousel_content_margin) * this.carousel_count;
+      console.log(this.carousel_one_tab_mask_width);
       $tabpanel_wrapper.width(this.carousel_one_tab_mask_width * $tabpanel.length );
     },
 
@@ -188,7 +191,7 @@
       this.active_index = index;
       this.i = i;
 
-      var carousel_tabs_max = (this.$carousel_tabpanel_contents.length / (this.carousel_count)) - 1;
+      var carousel_tabs_max = (this.$carousel_tabpanel_contents.length / (this.carousel_count * this.carousel_row)) - 1;
 
       // 처음 또는 마지막 인덱스에 해당할 경우 마지막 또는 처음으로 변경하는 조건 처리
       if ( this.active_index < 0 ) {
@@ -204,10 +207,8 @@
         this.i = 0;
       }
 
-      console.log(this.infinite);
-
       // Infinite Carousel
-      if(this.infinite === true) {
+      if(this.carousel_infinite === true) {
         // When you click next btn
         if(btn === 'next') {
           this.$carousel_tabpanel_contents.last().parent().append(this.$carousel_tabpanel_contents.eq(this.i - 1));
@@ -219,7 +220,7 @@
         }
       }
 
-      if(this.infinite === false) {
+      if(this.carousel_infinite === false) {
         this.$carousel_tabpanel_contents.eq(this.active_index).parent().stop().animate({
           'left': this.active_index * -this.carousel_one_tab_mask_width
         }, 600, 'easeOutExpo');

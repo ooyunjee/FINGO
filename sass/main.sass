@@ -3,10 +3,7 @@
 // * ---------------------------------------
 // * MODULES - reset, normalize, customize
 // * ---------------------------------------
-@import ./config/reset/reset
-@import ./config/reset/normalize
-@import ./config/config
-@import ./config/colors
+@import ./config/fingo-colors
 @import ../Modules/sass/style
 
 %top-1
@@ -97,10 +94,41 @@ main
   color: #fff
   .ui-carousel-tablist
     display: none
+  .ui-carousel-tabpanel
+    .hover
+      +position(absolute, top 0 z-index 1000)
+      +size(100% 100%)
+      display: none
+      cursor: pointer
+      background: rgba(#000000, 0.3)
+      p
+        +margin(top 55px bottom 40px)
+        font-size: 16px
+      .starts
+        +margin(top 40px)
+      button
+        +margin(bottom 10px left auto right auto)
+        +size(100px 35px)
+        font-size: 14px
+        display: block
+        color: #fff
+        border: 1px solid currentColor
+        &:nth-of-type(1):hover
+          +background(color $fingo-heart)
+          border: 1px solid $fingo-heart
+        &:nth-of-type(2):hover
+          +background(color #27569c)
+          border: 1px solid #27569c
+
+    &:hover
+      .hover
+        display: block
   .main-box-office
     +size(100% 880px)
     +background(color $fingo-bg-dark)
     text-align: center
+    .ui-carousel-tabpanel
+      position: relative
     h1
       +padding(top 110px)
       font-size: 22px
@@ -112,7 +140,7 @@ main
         transform: translateX(-50%)
         display: block
         background: #454545
-    p
+    .box-office-desc
       +margin(top 50px bottom 70px)
       font-weight: lighter
 
@@ -122,7 +150,7 @@ main
       color: #fff
     .ui-carousel-tabpanel
       opacity: 0.5
-      p
+      .box-office-rank
         +margin(top 20px)
         font-weight: normal
         span
@@ -137,11 +165,13 @@ main
           position: relative
           z-index: 1000
           opacity: 1
-    .ui-carousel-image
-      +size(232px auto)
+    // .ui-carousel-image
+      +size(323px auto)
   .main-movie-ranking
     +size(100% 1000px)
     +background(color $fingo-bg-light)
+    .ui-carousel-tabpanel
+      text-align: center
     .main-movie-ranking-btn-group
       button
         +size(232px 50px)
@@ -152,3 +182,11 @@ main
           background: $fingo-mian-color
     .ui-carousel-tabpanel-wrapper
       position: relative
+  .main-new-movie-trailers
+    +size(100% 420px)
+    +background(color $fingo-bg-light)
+    h1
+      +margin(bottom 40px)
+      font-size: 22px
+    // .ui-carousel-image
+      +size(400px 225px)
