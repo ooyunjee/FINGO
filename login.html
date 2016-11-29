@@ -7,10 +7,21 @@
   <title>FINGO - Login</title>
   <link href="http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/svg-style.css">
 </head>
 <body>
   <header class="header">
-    <h1 class="header-logo container"><img src="./img/logo.png" alt="FINGO"></h1>
+    <h1 class="header-logo container">
+      <span>FINGO</span>
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="104.75px" height="53px" viewbox="0 0 104.75 53" enable-background="new 0 0 104.75 53" xml:space="preserve">
+        <g>
+        	<path fill="#C5A370" d="M25.632,28.773v8.309h-4.58V15.916h9.553v3.959h-4.973v5.07h4.646v3.828H25.632z"></path><path fill="#C5A370" d="M37.867,15.916v21.166h-4.58V15.916H37.867z"></path><path fill="#C5A370" d="M53.405,37.082h-4.58V19.516c0-0.175-0.061-0.328-0.18-0.459c-0.12-0.131-0.268-0.195-0.441-0.195h-1.767c-0.175,0-0.322,0.064-0.441,0.195c-0.12,0.131-0.181,0.284-0.181,0.459v17.566h-4.58V19.908c0-2.879,1.353-4.318,4.057-4.318h4.057c2.704,0,4.057,1.439,4.057,4.318V37.082z"></path>
+        	<path fill="#C5A370" d="M62.663,28.676v-3.37h6.053v7.786c0,2.879-1.353,4.318-4.057,4.318h-4.122c-2.705,0-4.057-1.439-4.057-4.318V19.908c0-2.879,1.352-4.318,4.057-4.318h4.122c2.704,0,4.057,1.439,4.057,4.318v1.995h-4.352v-2.552c0-0.174-0.061-0.327-0.18-0.458c-0.12-0.131-0.268-0.196-0.441-0.196h-2.062c-0.175,0-0.321,0.065-0.441,0.196s-0.18,0.284-0.18,0.458v14.264c0,0.174,0.06,0.326,0.18,0.457s0.267,0.197,0.441,0.197h2.062c0.174,0,0.321-0.066,0.441-0.197c0.119-0.131,0.18-0.283,0.18-0.457v-4.939H62.663z"></path>
+        	<path fill="#C5A370" d="M83.698,19.908v13.184c0,2.879-1.353,4.318-4.057,4.318h-4.351c-2.705,0-4.057-1.439-4.057-4.318V19.908c0-2.879,1.352-4.318,4.057-4.318h4.351C82.345,15.59,83.698,17.029,83.698,19.908z M79.118,33.615V19.352c0-0.174-0.061-0.327-0.18-0.458c-0.12-0.131-0.268-0.196-0.441-0.196h-2.062c-0.175,0-0.321,0.065-0.441,0.196s-0.18,0.284-0.18,0.458v14.264c0,0.174,0.06,0.326,0.18,0.457s0.267,0.197,0.441,0.197h2.062c0.174,0,0.321-0.066,0.441-0.197C79.057,33.941,79.118,33.789,79.118,33.615z"></path>
+        </g>
+        <path id="border-box" fill="#C5A370" d="M0,0v53h104.75V0H0z M100.75,49.125H4V3.875h96.75V49.125z"></path>
+      </svg>
+    </h1>
   </header>
   <main class="main">
     <div class="login container">
@@ -19,7 +30,7 @@
         <label for="">이메일주소</label>
         <input type="email" placeholder="이메일 주소" required title="이메일 주소">
         <label for="">비밀번호</label>
-        <input type="password" placeholder="비밀번호"  required title="비밀번호">
+        <input type="password" placeholder="비밀번호" required title="비밀번호">
         <button type="submit" name="button">로그인</button>
       </form>
       <p>
@@ -27,9 +38,24 @@
         <span>/</span>
         <a href="#">회원가입하기</a>
       </p>
+      <div class="facebook-login">
+        <p>이미 페이스북으로 가입하셨다면</p>
+        <button type="button" name="button">facebook 로그인</button>
+      </div>
     </div>
   </main>
-  <footer class="footer">
+  <footer>
+    <div class="container">
+      <a href="#" title="홈으로" class="footer-logo"><img src="img/icon-footer-logo.png" alt="" /></a>
+      <div class="footer-copyright">
+        <p><a href="#">핑고 서비스 이용약관</a> | <a href="#">개인정보 취급방침 </a></p>
+        <span>Copyright © 2016 by Fingo - JiEun, YunJee</span>
+      </div>
+      <div class="footer-sns-group">
+        <a href="#" class="footer-sns-facebook" aria-label="핑고 페이스북 페이지로 이동" title="핑고 페이스북 페이지로 이동"><img src="img/icon-facebook.png" alt="" /></a>
+        <a href="#" class="footer-sns-twitter" aria-label="핑고 트위터로 이동" title="핑고 트위터로 이동"><img src="img/icon-twitter.png" alt="" /></a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

@@ -259,7 +259,7 @@ template {
   }
 }
 
-.header h1 span, .main .login form label {
+.header h1 span {
   overflow: hidden;
   position: absolute;
   clip: rect(0 0 0 0);
@@ -271,7 +271,7 @@ template {
   padding: 0;
 }
 
-input {
+input, .login-btn, .sign-up-btn {
   margin: 0;
   border: 0;
   padding: 0;
@@ -326,7 +326,7 @@ body {
   position: relative;
 }
 
-.main .login {
+.main .container {
   width: 300px;
   height: auto;
   position: absolute;
@@ -337,116 +337,63 @@ body {
 }
 
 @media (min-width: 751px) and (max-width: 1024px) {
-  .main .login {
-    width: 400px;
+  .main .container {
+    width: 450px;
     height: auto;
   }
 }
 
 @media (min-width: 1025px) {
-  .main .login {
-    width: 400px;
+  .main .container {
+    width: 450px;
     height: auto;
   }
 }
 
-.main .login h1 {
-  margin-bottom: 45px;
-  font-size: 28px;
+.main .container h1 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 24px;
   color: #fff;
 }
 
 @media (min-width: 1025px) {
-  .main .login h1 {
-    font-size: 26px;
+  .main .container h1 {
+    font-size: 20px;
   }
 }
 
-.main .login form input {
-  width: 300px;
-  height: 60px;
-  padding-left: 30px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 5px;
+.main .container h1 span {
+  color: #c6a471;
 }
 
-@media (min-width: 751px) and (max-width: 1024px) {
-  .main .login form input {
-    width: 400px;
-    height: 60px;
-  }
+.main .container h1 span span {
+  color: #fff;
+  font-style: italic;
 }
 
-@media (min-width: 1025px) {
-  .main .login form input {
-    width: 400px;
-    height: 60px;
-  }
-}
-
-.main .login form button {
-  margin-top: 35px;
-  width: 210px;
+.main .container .login-btn, .main .container .sign-up-btn {
+  width: 150px;
   height: 50px;
-  background-color: #c6a471;
-  color: #fff;
-  font-size: 16px;
-}
-
-@media (min-width: 1025px) {
-  .main .login form button {
-    font-size: 15px;
-  }
-}
-
-.main .login > p {
-  margin-top: 10px;
+  margin: 5px;
   display: inline-block;
-  border-bottom: 1px solid #adadad;
-}
-
-.main .login > p a, .main .login > p span {
-  color: #adadad;
-  font-size: 16px;
-  transition: 0.4s all;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 45px;
+  transition: 0.3s all;
+  font-size: 18px;
 }
 
 @media (min-width: 1025px) {
-  .main .login > p a, .main .login > p span {
-    font-size: 14px;
+  .main .container .login-btn, .main .container .sign-up-btn {
+    font-size: 16px;
   }
 }
 
-.main .login > p a:hover {
-  color: #fff;
-}
-
-.main .login .facebook-login {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  margin-top: 40px;
-  padding-top: 40px;
-}
-
-.main .login .facebook-login p {
-  color: #adadad;
-  font-size: 16px;
-  transition: 0.4s all;
-}
-
-@media (min-width: 1025px) {
-  .main .login .facebook-login p {
-    font-size: 14px;
-  }
-}
-
-.main .login .facebook-login button {
-  margin-top: 10px;
-  width: 210px;
-  height: 50px;
-  background-color: #203571;
-  color: #fff;
-  font-size: 16px;
+.main .container .login-btn:hover, .main .container .sign-up-btn:hover {
+  background: #fff;
+  color: #161616;
 }
 
 footer {
