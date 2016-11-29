@@ -1,8 +1,11 @@
+/*! ui-carousel-refactoring.js © heoyunjee, 2016 */
+
 %reset-body {
 	margin: 0;
 }
 
 %reset-image {
+	border: 0;
 	vertical-align: top;
 }
 
@@ -12,7 +15,7 @@
 	padding: 0;
 }
 
-%reset-box-sizing {
+%reset-border-box {
 	box-sizing: border-box;
 }
 
@@ -27,18 +30,18 @@
 }
 
 %reset-link {
-	text-decoration: none;
-}
-
-%reset-a-img {
-	border: none;
+  display: inline;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 %reset-list {
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-left: 0;
-	list-style: none;
+	margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-left: 0;
+  list-style: none;
 }
 
 %reset-table {
@@ -53,4 +56,12 @@
 	th {
 		align: left;
 	}
+}
+
+@mixin box-sizing($origin) {
+  -webkit-box-sizing: $origin;
+  -moz-box-sizing: $origin;
+  // -o-box-sizing: $origin;
+  -ms-box-sizing: $origin;
+  box-sizing: $origin;
 }
