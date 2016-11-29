@@ -16,12 +16,20 @@ button
 // layout
 body
   +size(100% auto)
-  +background(image url(../img/photo-sign-up-bg.jpg) size center repeat no-repeat)
+  +background(image url(../img/photo-sign-up-bg.jpg) size cover position center center repeat no-repeat)
   color: #fff
 
 .container
   +size(1240px auto)
   +margin(0 auto)
+  @media only screen and (min-width: 721px) and (max-width: 1024px)
+    +size(percentage(904px / 1024px) auto)
+  @media only screen and (max-width: 720px)
+    +size(percentage(650px / 720px) auto)
+
+
+header
+  +padding(top 30px)
 
 main
   +size(100% 100vh)
@@ -57,6 +65,7 @@ main
             border: 1px solid #fff
             border-radius: 50%
             display: inline-block
+            text-align: center
         &:checked + label::before
           content: '\2713'
           background: #fff
@@ -65,9 +74,10 @@ main
         +margin(top 40px)
 
       .sign-up-policy
+        display: block
         width: 100%
+        text-align: left
       button
-        // text-align: center
         +size(210px 50px)
         color: #fff
         background: #a38b67

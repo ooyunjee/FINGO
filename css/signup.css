@@ -261,7 +261,8 @@ body {
   height: auto;
   background-image: url(../img/photo-sign-up-bg.jpg);
   background-repeat: no-repeat;
-  background-size: center;
+  background-size: cover;
+  background-position: center center;
   color: #fff;
 }
 
@@ -269,6 +270,24 @@ body {
   width: 1240px;
   height: auto;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 721px) and (max-width: 1024px) {
+  .container {
+    width: 88.28125%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .container {
+    width: 90.27778%;
+    height: auto;
+  }
+}
+
+header {
+  padding-top: 30px;
 }
 
 main {
@@ -322,6 +341,7 @@ main .sign-up form input[type="checkbox"] + label::before {
   border: 1px solid #fff;
   border-radius: 50%;
   display: inline-block;
+  text-align: center;
 }
 
 main .sign-up form input[type="checkbox"]:checked + label::before {
@@ -335,7 +355,9 @@ main .sign-up form button {
 }
 
 main .sign-up form .sign-up-policy {
+  display: block;
   width: 100%;
+  text-align: left;
 }
 
 main .sign-up form button {
