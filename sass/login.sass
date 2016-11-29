@@ -22,14 +22,12 @@ body
 
 
 .container
-  // +size( width percentage($m-container-width/$bp-mobile) min-width 320px )
+  +size(percentage($d-container-width/1640px) auto)
   +margin(0 auto)
-  +mobile
-    width: percentage($m-container-width/$bp-mobile)
   +tablet
     width: percentage($t-container-width/$bp-tablet)
-  +desktop
-    width: percentage($d-container-width/$bp-desktop)
+  +mobile
+    width: percentage($m-container-width/$bp-mobile)
 
 .header
   +padding(top 20px)
@@ -42,53 +40,51 @@ body
   +size(100% 100vh)
   position: relative
   .login
-    +size(300px auto)
+    +size(400px auto)
     +position(absolute, top 50% left 50%)
     transform: translate(-50%, -50%)
     text-align: center
     +tablet
       +size(400px auto)
-    +desktop
-      +size(400px auto)
+    +mobile
+      +size(300px auto)
 
     h1
       +margin(bottom 45px)
-      font-size: 28px
+      font-size: 26px
       color: $fingo-white
-      +desktop
-        font-size: 26px
+      +mobile
+        font-size: 28px
 
     form
       label
         @extend %a11y-hidden
       input
-        +size(300px 60px)
+        +size(400px 60px)
         +padding(left 30px)
         +margin(bottom 15px)
         border: none
         border-radius: 5px
-        +tablet
-          +size(400px 60px)
-        +desktop
-          +size(400px 60px)
+        +mobile
+          +size(300px 60px)
       button
         +margin(top 35px)
         +size(210px 50px)
         +background(color $fingo-mian-color)
         color: $fingo-white
-        font-size: 16px
-        +desktop
-          font-size: 15px
+        font-size: 15px
+        +mobile
+          font-size: 16px
     >p
       +margin(top 10px)
       display: inline-block
       border-bottom: 1px solid $fingo-font-ad
       a, span
         color: $fingo-font-ad
-        font-size: 16px
+        font-size: 14px
         transition: 0.4s all
-        +desktop
-          font-size: 14px
+        +mobile
+          font-size: 16px
 
       a:hover
         color: $fingo-white
@@ -98,10 +94,10 @@ body
       +padding(top 40px)
       p
         color: $fingo-font-ad
-        font-size: 16px
+        font-size: 14px
         transition: 0.4s all
-        +desktop
-          font-size: 14px
+        +mobile
+          font-size: 16px
       button
         +margin(top 10px)
         +size(210px 50px)

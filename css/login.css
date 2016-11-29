@@ -241,7 +241,7 @@ template {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 750px) {
   .m-hidden {
     display: none;
   }
@@ -295,13 +295,9 @@ body {
 }
 
 .container {
+  width: 75.60976%;
+  height: auto;
   margin: 0 auto;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    width: 85.33333%;
-  }
 }
 
 @media (min-width: 751px) and (max-width: 1024px) {
@@ -310,9 +306,9 @@ body {
   }
 }
 
-@media (min-width: 1025px) {
+@media (max-width: 750px) {
   .container {
-    width: 64.58333%;
+    width: 85.33333%;
   }
 }
 
@@ -327,7 +323,7 @@ body {
 }
 
 .main .login {
-  width: 300px;
+  width: 400px;
   height: auto;
   position: absolute;
   top: 50%;
@@ -343,27 +339,27 @@ body {
   }
 }
 
-@media (min-width: 1025px) {
+@media (max-width: 750px) {
   .main .login {
-    width: 400px;
+    width: 300px;
     height: auto;
   }
 }
 
 .main .login h1 {
   margin-bottom: 45px;
-  font-size: 28px;
+  font-size: 26px;
   color: #fff;
 }
 
-@media (min-width: 1025px) {
+@media (max-width: 750px) {
   .main .login h1 {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 
 .main .login form input {
-  width: 300px;
+  width: 400px;
   height: 60px;
   padding-left: 30px;
   margin-bottom: 15px;
@@ -371,16 +367,9 @@ body {
   border-radius: 5px;
 }
 
-@media (min-width: 751px) and (max-width: 1024px) {
+@media (max-width: 750px) {
   .main .login form input {
-    width: 400px;
-    height: 60px;
-  }
-}
-
-@media (min-width: 1025px) {
-  .main .login form input {
-    width: 400px;
+    width: 300px;
     height: 60px;
   }
 }
@@ -391,12 +380,12 @@ body {
   height: 50px;
   background-color: #c6a471;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
 }
 
-@media (min-width: 1025px) {
+@media (max-width: 750px) {
   .main .login form button {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -408,13 +397,13 @@ body {
 
 .main .login > p a, .main .login > p span {
   color: #adadad;
-  font-size: 16px;
+  font-size: 14px;
   transition: 0.4s all;
 }
 
-@media (min-width: 1025px) {
+@media (max-width: 750px) {
   .main .login > p a, .main .login > p span {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -430,13 +419,13 @@ body {
 
 .main .login .facebook-login p {
   color: #adadad;
-  font-size: 16px;
+  font-size: 14px;
   transition: 0.4s all;
 }
 
-@media (min-width: 1025px) {
+@media (max-width: 750px) {
   .main .login .facebook-login p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
