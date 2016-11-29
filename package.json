@@ -1,0 +1,22 @@
+{
+  "name": "fingo",
+  "version": "1.0.0",
+  "description": "영화 평점 서비스 FINGO 입니다.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass -w -r sass -o css --output-style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ooyunjee/FINGO.git"
+  },
+  "author": "yunjee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ooyunjee/FINGO/issues"
+  },
+  "homepage": "https://github.com/ooyunjee/FINGO#readme",
+  "dependencies": {
+    "node-sass": "^3.13.0"
+  }
+}

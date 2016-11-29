@@ -1,0 +1,519 @@
+@charset "UTF-8";
+/*! reset.css © joeun, 2016 */
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  line-height: 1.5;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active, a:hover {
+  outline-width: 0;
+}
+
+abbr[title] {
+  border-bottom: 0;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .m-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1024px) {
+  .t-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .d-hidden {
+    display: none;
+  }
+}
+
+.nav .logo > h1 span, .nav form label, .nav .profile h1 {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+input, .nav {
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+input {
+  background: transparent;
+  border: 0;
+}
+
+body {
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  width: 100%;
+  height: auto;
+  background-color: #1e1e1e;
+}
+
+.container {
+  width: 75.60976%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 751px) and (max-width: 1024px) {
+  .container {
+    width: 94.14063%;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    width: 85.33333%;
+  }
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+}
+
+.nav .logo > h1 {
+  display: inline-block;
+  margin-top: 29px;
+}
+
+.nav ul {
+  position: absolute;
+  top: 0;
+  left: 135px;
+}
+
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li a {
+  display: block;
+  font-size: 16px;
+  margin-right: 40px;
+  color: #fff;
+  line-height: 100px;
+}
+
+.nav form {
+  position: absolute;
+  top: 33px;
+  right: 133px;
+}
+
+.nav form input {
+  width: 350px;
+  height: 35px;
+  padding-left: 20px;
+  background-color: rgba(22, 22, 22, 0.5);
+  border-radius: 50px;
+  color: #ddd;
+  position: relative;
+}
+
+.nav form button {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+}
+
+.nav .profile {
+  position: absolute;
+  top: 28px;
+  right: 0;
+}
+
+.nav .profile p {
+  display: inline-block;
+  line-height: 42px;
+  color: #fff;
+  margin-right: 15px;
+  font-style: 16px;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+.header .visual-01 img {
+  width: 100%;
+  height: auto;
+}
+
+.header .visual-01 .visual {
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header .visual-01 .visual .visual-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 350px;
+  text-align: left;
+  margin-left: 80px;
+}
+
+.header .visual-01 .visual .visual-text h1 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 70px;
+  margin-bottom: 20px;
+}
+
+.header .visual-01 .visual .visual-text p {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.header .visual-01 .visual .visual-text a {
+  display: block;
+  border: 1px solid #fff;
+  width: 125px;
+  height: 30px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.header .visual-01 .visual .arrow .left-arrow {
+  background-color: #ddd;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: -50px;
+}
+
+.header .visual-01 .visual .arrow .right-arrow {
+  background-color: #ddd;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: -50px;
+}
+
+.header .visual-01 .visual .visual-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  background: #161616;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer .container {
+  padding-top: 40px;
+}
+
+footer .container .footer-logo {
+  float: left;
+  margin-right: 50px;
+}
+
+footer .container .footer-copyright {
+  position: relative;
+  top: 5px;
+  width: 250px;
+  float: left;
+}
+
+footer .container .footer-copyright p {
+  font-size: 14px;
+}
+
+footer .container .footer-copyright span {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+footer .footer-sns-group {
+  float: right;
+}
+
+footer .footer-sns-group a {
+  width: 45px;
+  height: 45px;
+  margin-left: 15px;
+  position: relative;
+  display: inline-block;
+  background: #333;
+  border-radius: 50%;
+}
+
+footer .footer-sns-group a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer .footer-sns-group .footer-sns-facebook:hover {
+  background: #203571;
+}
+
+footer .footer-sns-group .footer-sns-twitter:hover {
+  background: #30758b;
+}
