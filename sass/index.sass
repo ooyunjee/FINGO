@@ -1,0 +1,124 @@
+// fingo - login.sass
+//
+// * --------------------------------
+// * RESET
+// * --------------------------------
+@import ./config/reset/reset
+@import ./config/reset/normalize
+@import ./config/config
+@import ../Modules/sass/style
+
+
+input, .login-btn, .sign-up-btn
+  @extend %reset-box-model
+
+button
+  @extend %reset-button
+
+body
+  font-family: 'Spoqa Han Sans', 'Sans-serif'
+  +size(100% auto)
+  +background(image url('../img/bg-img.jpg') position center repeat no-repeat size cover)
+
+
+.container
+  // +size( width percentage($m-container-width/$bp-mobile) min-width 320px )
+  +margin(0 auto)
+  +mobile
+    width: percentage($m-container-width/$bp-mobile)
+  +tablet
+    width: percentage($t-container-width/$bp-tablet)
+  +desktop
+    width: percentage($d-container-width/$bp-desktop)
+
+.header
+  +padding(top 20px)
+  // h1 img
+  //   +size(86px 43px)
+  h1 span
+    @extend %a11y-hidden
+
+.main
+  +size(100% 100vh)
+  position: relative
+  .container
+    +size(300px auto)
+    +position(absolute, top 50% left 50%)
+    transform: translate(-50%, -50%)
+    text-align: center
+    +tablet
+      +size(450px auto)
+    +desktop
+      +size(450px auto)
+
+    h1
+      +margin(bottom 25px top 25px)
+      font-size: 24px
+      color: $fingo-white
+      +desktop
+        font-size: 20px
+      span
+        color: $fingo-mian-color
+        span
+          color: $fingo-white
+          font-style: italic
+    .login-btn, .sign-up-btn
+      +size(150px 50px)
+      +margin(5px)
+      display: inline-block
+      border: 3px solid $fingo-white
+      border-radius: 10px
+      color: $fingo-white
+      line-height: 45px
+      transition: 0.3s all
+      font-size: 18px
+      +desktop
+        font-size: 16px
+    .login-btn:hover, .sign-up-btn:hover
+      background: $fingo-white
+      // border: 3px solid $fingo-mian-color
+      color: #161616
+
+
+// * --------------------------------
+// * Footer
+// * --------------------------------
+footer
+  +size(100% 150px)
+  background: $fingo-bg-dark
+  a
+    color: $fingo-white
+  .container
+    padding-top: 40px
+    .footer-logo
+      float: left
+      margin-right: 50px
+    .footer-copyright
+      +position(relative, top 5px)
+      width: 250px
+      float: left
+      p
+        font-size: 14px
+      span
+        font-size: 12px
+        font-weight: lighter
+  .footer-sns-group
+    float: right
+    a
+      +size(45px)
+      +margin(left 15px)
+      position: relative
+      display: inline-block
+      background: $fingo-font-33
+      border-radius: 50%
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    .footer-sns-facebook
+      &:hover
+        background: #203571
+    .footer-sns-twitter
+      &:hover
+        background: #30758b

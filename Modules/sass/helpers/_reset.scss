@@ -9,6 +9,10 @@
 	vertical-align: top;
 }
 
+%reset-display-inlineblock{
+	display: inline-block;
+}
+
 %reset-box-model {
 	margin: 0;
 	border: 0;
@@ -23,6 +27,11 @@
 	background: transparent;
 	border: 0;
 	cursor: pointer;
+}
+
+%reset-input {
+	background: transparent;
+	border: 0;
 }
 
 %reset-outline {
