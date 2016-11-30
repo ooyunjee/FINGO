@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <style>
-  svg #border-box{
-    stroke: #C5A370;
-    stroke-width: 2px;
-    stroke-dasharray: 700;
-    stroke-dashoffset: 700;
-    stroke-linecap: butt;
-    -webkit-transition: all 1.5s ease-out;
-    -moz-transition: all 1.5s ease-out;
-    -ms-transition: all 1.5s ease-out;
-    -o-transition: all 1.5s ease-out;
-    transition: all 1.5s ease-out;
-  }
-  svg:hover #border-box{
-    /*stroke: #C5A370;
-    stroke-width: 1px;*/
-    stroke-dashoffset: 0;
-    stroke-dasharray: 700;
-    stroke-width: 8;
-  }
-  </style>
-</head>
-<body>
   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   	 width="104.75px" height="53px" viewBox="0 0 104.75 53" enable-background="new 0 0 104.75 53" xml:space="preserve">
   <g>
@@ -56,5 +26,3 @@
 
   </path>
   </svg>
-</body>
-</html>
