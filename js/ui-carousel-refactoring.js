@@ -1,23 +1,24 @@
-(function(global, $){
-  'use strict';
-
-  $.fn.radioClass = function(class_name) {
-    this.siblings('.'+class_name).removeClass(class_name);
-    this.addClass(class_name);
-    return this;
-  };
-
-})(this, this.jQuery);
 /*! ui-carousel-refactoring.js © heoyunjee, 2016 */
 (function(global, $){
   'use strict';
 
+  /**
+   * width: carousel width
+   * height: carousel height
+   * margin: tabpanel margin
+   * count: how many tabpanels will move when you click button
+   * col: how many columns in carousel mask
+   * row: how many rows in carousel mask
+   * infinite: infinite carousel or not(true or false)
+   * index: index of active tabpanel
+   */
   // Default Options
   var defaults = {
     'width': 1240,
     'height': 390,
     'margin': 20,
     'count': 1,
+    'col': 1,
     'row': 1,
     'infinite': true,
     'index': 0
@@ -38,20 +39,23 @@
 
     this.setCarouselRatio(this.settings.width, this.settings.height);
     this.carousel_count                  = this.settings.count;
+    this.carousel_col                  = this.settings.col;
     this.carousel_content_margin         = this.settings.margin;
-    this.active_index                    = this.settings.index;
+    this.active_index                    = 0;
     this.carousel_one_tab_mask_width     = 0;
     this.carousel_content_width          = 0;
     this.carousel_content_height         = 0;
+
     this.$carousel                       = null;
     this.$carousel_headline              = null;
     this.$carousel_tablist               = null;
     this.$carousel_tabs                  = null;
     this.$carousel_button_group          = null;
-    this.$carousel_tabpanel_contents     = null;
+    this.$carousel_mask                  = null;
+    this.$carousel_tabpanels             = null;
     this.$carousel_tabpanel_content_imgs = null;
 
-    this.i = 0;
+    this.i = -this.settings.index;
 
     // Priviliged(특권을 주는 것)
     // this.getSettings = function () {
@@ -77,15 +81,21 @@
       this.$carousel_headline = this.$carousel.children(':header:first');
       this.$carousel_tablist  = this.$carousel.children('ul').wrap('<div/>').parent();
       this.$carousel_tabs     = this.$carousel_tablist.find('a');
-      this.$carousel_tabpanel_contents = this.$carousel.children().last().children();
+      // figure
+      this.$carousel_tabpanels = this.$carousel.children().last().children();
+      console.log('tabpanel_contents', this.$carousel_tabpanels);
       this.$carousel_tabpanel_content_imgs = this.$carousel.children().last().find('img').not('.icon');
 
       this.carousel_content_width = this.$carousel_tabpanel_content_imgs.eq(0).width();
       this.carousel_content_height = this.$carousel_tabpanel_content_imgs.eq(0).height();
 
+      this.$carousel_content = this.$carousel_tabpanels.children().parent();
+      // console.log(this.$carousel_content.width());
+      // console.log('content:', this.$carousel_content);
+
       // // 동적으로 캐러셀 구조 생성/추가
       this.createPrevNextButtons();
-      this.createTabpanelWrapper();
+      this.createCarouselMask();
       // // 역할별 스타일링 되는 클래스 설정
       this.settingClass();
       this.settingSliding();
@@ -110,8 +120,10 @@
       this.$carousel_button_group = $(button_group).insertAfter( this.$carousel_tablist );
     },
 
-    'createTabpanelWrapper': function() {
-      this.$carousel_tabpanel_contents.parent().closest('div').wrap('<div/>');
+    'createCarouselMask': function() {
+      this.$carousel_tabpanels.parent().closest('div').wrap('<div/>');
+      this.$carousel_mask = this.$carousel.children().last();
+      // console.log('mask', this.$carousel_mask);
     },
 
     'settingClass': function() {
@@ -122,34 +134,59 @@
       this.$carousel_button_group.addClass('ui-carousel-button-group');
       this.$carousel_button_group.children().first().addClass('ui-carousel-prev-button');
       this.$carousel_button_group.children().last().addClass('ui-carousel-next-button');
-      this.$carousel_tabpanel_contents.addClass('ui-carousel-tabpanel');
-      this.$carousel_tabpanel_contents.parent().closest('div').addClass('ui-carousel-tabpanel-wrapper');
-      this.$carousel_tabpanel_contents.parent().closest('div').parent().addClass('ui-carousel-mask');
+      this.$carousel_tabpanels.addClass('ui-carousel-tabpanel');
+      this.$carousel_tabpanels.parent().closest('div').addClass('ui-carousel-tabpanel-wrapper');
+      this.$carousel_tabpanels.parent().closest('div').parent().addClass('ui-carousel-mask');
       this.$carousel_tabpanel_content_imgs.addClass('ui-carousel-image');
     },
 
     'settingSliding': function() {
       var $carousel = this.$carousel;
 
-      var $tabpanel = $carousel.find('.ui-carousel-tabpanel');
+      // var $tabpanel = $carousel.find('.ui-carousel-tabpanel');
+      var $tabpanel = this.$carousel_tabpanels;
       var $tabpanel_wrapper = $tabpanel.parent();
-      var $carousel_mask = $carousel.children().last();
+      var $carousel_mask = this.$carousel_mask;
+      var carousel_tabpannel_width = ($tabpanel_wrapper.width() - (this.carousel_col - 1) * this.carousel_content_margin) / this.carousel_col;
 
+      console.log('carousel width', $carousel.width());
+      console.log('count', this.settings.count);
       $carousel.height($carousel.width() * this.carousel_ratio );
 
       // Set carousel mask height
       $carousel_mask.height( $carousel.width() * this.carousel_ratio );
 
       // Set carousel tabpanel(div or img) size and margin
+      // console.log('wrapper:', carousel_tabpannel_width);
+      if(this.settings.col === 1) {
+        $tabpanel
+          .width($carousel.width())
+          .height($carousel.height())
+          .css('margin-right', this.carousel_content_margin);
+        console.log('tabpanle widht:', $tabpanel.width());
+        console.log('tabpanle height:', $tabpanel.height());
+      }
+
       $tabpanel
-        .width(this.carousel_content_width)
+        .width(carousel_tabpannel_width)
         .height(this.carousel_content_height)
         .css('margin-right', this.carousel_content_margin);
 
       // Set carousel one tab mask width
-      this.carousel_one_tab_mask_width = ($tabpanel.width() + this.carousel_content_margin) * this.carousel_count;
-      console.log(this.carousel_one_tab_mask_width);
-      $tabpanel_wrapper.width(this.carousel_one_tab_mask_width * $tabpanel.length );
+      this.carousel_one_tab_mask_width = ($tabpanel.width() + this.carousel_content_margin) * this.carousel_count - this.carousel_content_margin;
+      // this.carousel_mask_width = $tabpanel.width() + this.carousel_content_margin;
+      // console.log(this.carousel_mask_width);
+      console.log('carousel mask', $carousel_mask.width());
+      // console.log(this.$tabpanel);
+
+      $tabpanel_wrapper.width(($tabpanel.width() + this.carousel_content_margin) * $tabpanel.length);
+
+
+      // this.$carousel_tabpanels.last().parent().prepend(this.$carousel_tabpanels.eq($tabpanel.length));
+      if(this.settings.index !== 0) {
+        this.$carousel_tabpanels.last().parent().prepend(this.$carousel_tabpanels.eq($tabpanel.length - 1));
+        this.$carousel_tabpanels.last().parent().prepend(this.$carousel_tabpanels.eq($tabpanel.length - 2));
+      }
     },
 
     'events': function() {
@@ -191,7 +228,12 @@
       this.active_index = index;
       this.i = i;
 
-      var carousel_tabs_max = (this.$carousel_tabpanel_contents.length / (this.carousel_count * this.carousel_row)) - 1;
+      var carousel_tabs_max = (this.$carousel_tabpanels.length / (this.carousel_col * this.carousel_row)) - 1;
+
+      // 한 마스크 안에 패널이 다 채워지지 않을 경우
+      if((this.$carousel_tabpanels.length % (this.carousel_col * this.carousel_row)) !== 0) {
+        carousel_tabs_max = carousel_tabs_max + 1;
+      }
 
       // 처음 또는 마지막 인덱스에 해당할 경우 마지막 또는 처음으로 변경하는 조건 처리
       if ( this.active_index < 0 ) {
@@ -209,25 +251,29 @@
 
       // Infinite Carousel
       if(this.carousel_infinite === true) {
+        // this.$carousel_tabpanels.last().parent() : wrapper
         // When you click next btn
         if(btn === 'next') {
-          this.$carousel_tabpanel_contents.last().parent().append(this.$carousel_tabpanel_contents.eq(this.i - 1));
+          this.$carousel_tabpanels.last().parent().append(this.$carousel_tabpanels.eq(this.i - 1));
+          // this.$carousel_tabpanels.eq(this.i).parent().stop().animate({
+          //   'left': this.i * -this.carousel_one_tab_mask_width;
+          // }, 600, 'easeOutExpo');
         }
 
         // When you click prev btn
         if(btn === 'prev') {
-          this.$carousel_tabpanel_contents.last().parent().prepend(this.$carousel_tabpanel_contents.eq(this.i));
+          this.$carousel_tabpanels.last().parent().prepend(this.$carousel_tabpanels.eq(this.i));
         }
       }
 
       if(this.carousel_infinite === false) {
-        this.$carousel_tabpanel_contents.eq(this.active_index).parent().stop().animate({
+        this.$carousel_tabpanels.eq(this.active_index).parent().stop().animate({
           'left': this.active_index * -this.carousel_one_tab_mask_width
         }, 600, 'easeOutExpo');
       }
 
       // index에 해당되는 탭패널 활성화
-      this.$carousel_tabpanel_contents.eq(this.active_index).radioClass('active');
+      this.$carousel_tabpanels.eq(this.active_index).radioClass('active');
 
       // 인디케이터 라디오클래스 활성화
       this.$carousel_tabs.eq(this.active_index).parent().radioClass('active');
