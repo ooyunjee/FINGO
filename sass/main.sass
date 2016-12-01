@@ -84,14 +84,26 @@ body
   +mobile
     width: percentage($m-container-width/$bp-mobile)
 
-
 header
   +size(100% 850px)
-  background: #1d1d1d
-  color: #fff
+  // .main-header-carousel
+    +size(100% 850px)
+  .ui-carousel-image
+    +size(100% auto)
+  .ui-carousel-button-group
+    .ui-carousel-prev-button
+      left: 100px
+    .ui-carousel-next-button
+        right: 50px
 
+// * --------------------------------
+// * Main
+// * --------------------------------
 main
   color: #fff
+  a
+    @extend %reset-link
+    color: #fff
   .ui-carousel-tablist
     display: none
   .ui-carousel-tabpanel
@@ -119,16 +131,24 @@ main
         &:nth-of-type(2):hover
           +background(color #27569c)
           border: 1px solid #27569c
+    &:focus,
+    &:active
+      .hover
+        display: block
 
     &:hover
       .hover
         display: block
+
+
   .main-box-office
     +size(100% 880px)
     +background(color $fingo-bg-dark)
     text-align: center
     .ui-carousel-tabpanel
       position: relative
+    .ui-carousel-image
+      +size(232px auto)
     h1
       +padding(top 110px)
       font-size: 22px
@@ -165,8 +185,7 @@ main
           position: relative
           z-index: 1000
           opacity: 1
-    // .ui-carousel-image
-      +size(323px auto)
+
   .main-movie-ranking
     +size(100% 1000px)
     +background(color $fingo-bg-light)
@@ -182,11 +201,12 @@ main
           background: $fingo-mian-color
     .ui-carousel-tabpanel-wrapper
       position: relative
+
   .main-new-movie-trailers
     +size(100% 420px)
     +background(color $fingo-bg-light)
+    .ui-carousel-image
+      +size(400px 225px)
     h1
       +margin(bottom 40px)
       font-size: 22px
-    // .ui-carousel-image
-      +size(400px 225px)
