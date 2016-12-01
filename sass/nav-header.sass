@@ -3,16 +3,14 @@
 // * --------------------------------
 // * RESET
 // * --------------------------------
-@import ./config/reset/reset
-@import ./config/reset/normalize
-@import ./config/config
+@import ./config/fingo-colors
 @import ../Modules/sass/style
 
 
 // .nav>h1,.nav>ul
 //   @extend %reset-display-inlineblock
 input, .nav
-  @extend %reset-box-sizing
+  @extend %reset-border-box
 input
   @extend %reset-input
 button
@@ -25,7 +23,7 @@ body
   +background(color $fingo-bg-light)
 
 .container
-  +size(percentage($d-container-width/1640px) auto)
+  +size(1240px auto)
   +margin(0 auto)
   position: relative
   +tablet
