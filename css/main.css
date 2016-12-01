@@ -58,10 +58,6 @@ figcaption, figure, main {
   display: block;
 }
 
-figure {
-  margin: 1em 40px;
-}
-
 hr {
   box-sizing: content-box;
   height: 0;
@@ -780,7 +776,7 @@ body {
 
 @media (min-width: 751px) and (max-width: 1024px) {
   .container {
-    width: 94.14062%;
+    width: 94.14063%;
   }
 }
 

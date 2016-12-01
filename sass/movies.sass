@@ -15,9 +15,13 @@ input
 button
   @extend %reset-button
 
+// .account, .total-movies, .received-likes
+  // @extend %position-center
+
 body
   font-family: 'Spoqa Han Sans', 'Sans-serif'
   +size(100% auto)
+  +background(color $fingo-bg-light)
 
 .container
   +size(1240px auto)
@@ -26,6 +30,7 @@ body
     width: percentage($t-container-width/$bp-tablet)
   +mobile
     width: percentage($m-container-width/$bp-mobile)
+
 
 
 // * --------------------------------
@@ -108,9 +113,11 @@ body
         +tablet
           font-size: 25px
           font-weight: normal
+          +margin(right 0px)
         +mobile
           font-size: 25px
           font-weight: normal
+          +margin(right 0px)
         &:hover
           +tablet
             color: $fingo-mian-color
@@ -121,7 +128,7 @@ body
           display: block
           +size(100% 2px)
           +background(color $fingo-mian-color)
-          +position(absolute,top 65px left 0px)
+          +position(absolute,top 20px left 0px)
           transition: all 0.3s
           transform: scaleX(0)
           +tablet
@@ -136,6 +143,8 @@ body
     +position(absolute, top 33px right 133px)
     +tablet
       +position(absolute, top 33px right 200px)
+    +mobile
+      +position(absolute, top 33px right 155px)
     label
       @extend %a11y-hidden
     input
@@ -152,16 +161,18 @@ body
     button
       +position(absolute, top 7px right 20px)
 
-  .profile
+  .profile-menu
     +position(absolute, top 28px right 0)
     +tablet
       +position(absolute, top 33px right 70px)
+    +mobile
+      +position(absolute, top 33px right 50px)
     &::after
       content: ""
       display: block
       +size(100% 2px)
       +background(color $fingo-mian-color)
-      +position(absolute,top 55px left 0px)
+      +position(absolute,top 50px left 0px)
       transition: all 0.3s
       transform: scaleX(0)
     &:hover::after
@@ -174,11 +185,234 @@ body
       color: $fingo-white
       +margin(right 15px)
       font-style: 16px
+    img
+      +size(42px 42px)
 
 // * --------------------------------
 // * Header
 // * --------------------------------
 header
   +size(100% 450px)
-  background: #444
   color: #fff
+  +background(image url('../img/sub-bg-img.png') position center center repeat no-repeat size cover)
+  .profile
+    height: 450px
+    text-align: center
+    .account
+      position: relative
+      // display: inline-block
+      +padding(top 200px)
+      text-align: center
+      h1
+        @extend %a11y-hidden
+      .thumbnail
+        img
+          +size(75px 75px)
+      p
+        font-size: 18px
+        +margin(top 10px)
+    section:nth-child(2), section:nth-child(3)
+      display: inline-block
+    .total-movies
+      +position(relative, top -95px left -50px)
+      // +margin(top -80px  left 200px)
+      h1
+        +position(relative, top 40px left 0)
+        font-size: 12px
+      strong
+        font-size: 16px
+        font-weight: normal
+
+    .received-likes
+      +position(relative, top -95px right -50px)
+      // +margin(top -48px  right 200px)
+      h1
+        +position(relative, top 40px left 0)
+        font-size: 12px
+      img
+        +position(relative, top 5px left 0)
+      strong
+        font-size: 16px
+        font-weight: normal
+// * --------------------------------
+// * Main
+// * --------------------------------
+main
+  .sub-menu
+    +size(100% 60px)
+    border-bottom: 1px solid $fingo-border
+    ul
+      li
+        float: left
+        border-left: 1px solid $fingo-border
+        border-right: 1px solid $fingo-border
+
+        &:nth-child(2), &:nth-child(3), &:nth-child(4)
+          border-left: none
+        // &:hover
+          // border-bottom: 1px solid $fingo-mian-color
+        //tab active 부분
+        // &:nth-child(3)
+          // border-bottom: 1px solid $fingo-mian-color
+
+        &::after
+          content: ""
+          display: block
+          +size(100% 1px)
+          +background(color $fingo-mian-color)
+          clear: both
+          transform: scale(0)
+          transition: all 0.3s
+        &:nth-child(3)::after
+          transform: scale(1)
+        &:hover::after
+          transform: scale(1)
+
+        a
+          +size(auto 60px)
+          +padding(left 20px right 20px)
+          display: block
+          color: $fingo-font-dd
+          font-size: 14px
+          line-height: 60px
+
+.movies
+  +margin(top 60px)
+
+
+  h1
+    @extend %a11y-hidden
+  .movie-list
+    +tablet
+      +size(736px auto)
+      +margin(0 auto)
+    +mobile
+      +size(350px auto)
+      +margin(0 auto)
+    &::after
+      content: ""
+      display: block
+      clear: both
+    figure
+      float: left
+      +margin(right 20px bottom 20px)
+      transition: 0.3s all
+      position: relative
+      &:nth-child(5n)
+        +margin(right 0px)
+      +tablet
+        &:nth-child(3n)
+          +margin(right 0px)
+        &:nth-child(5n)
+          +margin(right 20px)
+      +mobile
+        background-color: pink
+        // +margin(right 20px auto)
+        +size(350px 500px)
+        &:nth-child(2n)
+          +margin(right 0px)
+        &:nth-child(5n)
+          +margin(right 20px)
+      img
+        +mobile
+          +size(350px 500px)
+
+      .hover
+        +position(absolute, top 0 z-index 1000)
+        +size(100% 100%)
+        opacity: 0
+        cursor: pointer
+        background: rgba(#000000, 0.3)
+        text-align: center
+        p
+          +margin(top 55px)
+          font-size: 16px
+          color: $fingo-white
+          +mobile
+            font-size: 20px
+            +margin(top 90px)
+        .stars
+          text-align: center
+          +size(180px 36px)
+          +margin(top 40px bottom 55px left auto right auto)
+          +mobile
+            +size(230px 38px)
+            +margin(top 60px bottom 80px)
+          span
+            +size(13px 26px)
+            display: block
+            overflow: hidden
+            float: left
+            position: relative
+            +mobile
+
+              +size(19px 38px)
+            a
+              +size(13px 26px)
+              display: block
+              +mobile
+                +size(19px 38px)
+              img
+                +size(26px 26px)
+                +mobile
+                  +size(38px 38px)
+            &:hover a img
+              opacity: 0
+            &:nth-of-type(2n)
+              +margin(right 10px)
+              img
+                +position(relative,top 0px right 13px)
+                +mobile
+                  +position(relative,top 0px right 19px)
+            &:last-child
+              +margin(right 0px)
+            &:nth-of-type(2n)::after
+              content: url('../img/icon-star-on.svg')
+              // background-color: #e7ae5a
+              display: block
+              +position(absolute, top 1px right 0)
+              opacity: 0
+              +mobile
+                // +backgroun(url('../img/icon-star-on.svg') position center center repeat no-repeat size cover)
+                +size(38px 38px)
+
+                // transform: scale(1)
+            &:nth-of-type(1n)::after
+              content: url('../img/icon-star-on.svg')
+              display: block
+              opacity: 0
+              +position(absolute, top 1px )
+          span:hover::after
+            opacity: 1
+
+        button
+          +margin(bottom 10px left auto right auto)
+          +size(110px 35px)
+          font-size: 14px
+          display: block
+          color: #fff
+          border: 1px solid currentColor
+          letter-spacing: -1px
+          +mobile
+            +size(180px 50px)
+            font-size: 16px
+          img:first-child
+            +size(16px 13px)
+            +margin(right 5px)
+            +mobile
+              +size(21px 19px)
+
+
+
+          &:nth-of-type(1):hover,
+          &:nth-of-type(1):active
+            +background(color $fingo-heart)
+            border: 1px solid $fingo-heart
+          &:nth-of-type(2):hover,
+          &:nth-of-type(2):active
+            +background(color #27569c)
+            border: 1px solid #27569c
+
+      &:hover
+        .hover
+          opacity: 1

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ddd;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon-comment.svg" class="cls-1" d="M524,826.091c0-3.364,2.4-6.091,8-6.091s8,2.727,8,6.091c0,2.879-1.19,5.289-5.655,5.926a5.848,5.848,0,0,0,1.921,2.98c-1.833,0-3.641-1.5-4.88-2.827C526.075,831.979,524,829.331,524,826.091Z" transform="translate(-524 -820)"/>
+</svg>

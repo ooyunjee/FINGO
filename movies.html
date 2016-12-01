@@ -45,269 +45,452 @@
         <input type="search" placeholder="Search" required name="" value="">
         <button type="submit" name="button" required><img src="./img/icon-search.svg" alt="검색버튼"></button>
       </form>
-      <div class="profile">
+      <div class="profile-menu">
         <a href="#">
           <h1>프로필</h1>
           <p>이름</p>
-          <img src="./img/icon-profile.png" alt="프로필 사진">
+          <img src="./img/icon-profile.svg" alt="프로필 사진">
         </a>
       </div>
     </div>
   </nav>
   <header class="header">
-    <section class="account">
-      <img src="./img/profile.png" alt="프로필 사진">
-      <p>이름</p>
-    </section>
-    <section class="total-movies">
-      <p>영화 보관함</p>
-    </section>
-    <section class="received-likes">
-      <img src="./img/icon-like.png" alt="좋아요">
-      <p>받은 좋아요</p>
-    </section>
+    <div class="profile container">
+      <section class="account">
+        <h1>개인 프로필</h1>
+        <div class="thumbnail">
+          <img src="./img/icon-profile.svg" alt="프로필 사진">
+        </div>
+        <p>이름</p>
+      </section>
+      <section class="total-movies">
+        <h1>영화 보관함</h1>
+        <strong>000</strong>
+      </section>
+      <section class="received-likes">
+        <h1>받은 좋아요</h1>
+        <img src="./img/icon-like.svg" alt="좋아요">
+        <strong>000</strong>
+      </section>
+    </div>
   </header>
   <main>
     <div class="sub-menu">
-      <ul>
+      <ul class="container">
         <li><a href="#">취향통개분석</a></li>
         <li><a href="#">보고싶어요</a></li>
         <li><a href="#">봤어요</a></li>
         <li><a href="#">코맨트</a></li>
       </ul>
     </div>
-    <figure class="top-1">
-      <img src="img/photo-main-poster-2.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-2">
-      <img src="img/photo-main-poster-3.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-1 left-2">
-      <img src="img/photo-main-poster-4.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-2 left-2">
-      <img src="img/photo-main-poster-5.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-1 left-3">
-      <img src="img/photo-main-poster-1.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-2 left-3">
-      <img src="img/photo-main-poster-2.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-1 left-4">
-      <img src="img/photo-main-poster-3.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-2 left-4">
-      <img src="img/photo-main-poster-4.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-1 left-5">
-      <img src="img/photo-main-poster-5.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-2 left-5">
-      <img src="img/photo-main-poster-1.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-1 left-6">
-      <img src="img/photo-main-poster-2.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-2 left-6">
-      <img src="img/photo-main-poster-3.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-1 left-7">
-      <img src="img/photo-main-poster-4.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-2 left-7">
-      <img src="img/photo-main-poster-5.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-1 left-8">
-      <img src="img/photo-main-poster-1.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-2 left-8">
-      <img src="img/photo-main-poster-2.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-1 left-9">
-      <img src="img/photo-main-poster-3.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-2 left-9">
-      <img src="img/photo-main-poster-4.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-1 left-10">
-      <img src="img/photo-main-poster-5.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-    <figure class="top-2 left-10">
-      <img src="img/photo-main-poster-1.png" alt="">
-      <div class="hover">
-        <p>신비한 동물사전</p>
-        <p class="stars">별 별 별 별 별</p>
-        <button type="button">보고싶어요</button>
-        <button type="button">코멘트 쓰기</button>
-      </div>
-    </figure>
-  </div>
-</div>
-</div>
+
+  <section class="container movies">
+    <h1>봤어요 목록</h1>
+    <div class="movie-list">
+      <figure class="top-1">
+        <img src="img/photo-main-poster-2.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2">
+        <img src="img/photo-main-poster-3.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-1 left-2">
+        <img src="img/photo-main-poster-4.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2 left-2">
+        <img src="img/photo-main-poster-5.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-1 left-3">
+        <img src="img/photo-main-poster-1.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2 left-3">
+        <img src="img/photo-main-poster-2.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-1 left-4">
+        <img src="img/photo-main-poster-3.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2 left-4">
+        <img src="img/photo-main-poster-4.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-1 left-5">
+        <img src="img/photo-main-poster-5.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2 left-5">
+        <img src="img/photo-main-poster-1.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2 left-5">
+        <img src="img/photo-main-poster-1.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2 left-6">
+        <img src="img/photo-main-poster-3.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-1 left-7">
+        <img src="img/photo-main-poster-4.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2 left-7">
+        <img src="img/photo-main-poster-5.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-1 left-8">
+        <img src="img/photo-main-poster-1.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2 left-8">
+        <img src="img/photo-main-poster-2.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-1 left-9">
+        <img src="img/photo-main-poster-3.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2 left-9">
+        <img src="img/photo-main-poster-4.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-1 left-10">
+        <img src="img/photo-main-poster-5.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+      <figure class="top-2 left-10">
+        <img src="img/photo-main-poster-1.png" alt="">
+        <div class="hover">
+          <p>신비한 동물사전</p>
+          <div class="stars">
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+            <span><a href="#"><img src="./img/icon-star.svg" alt="별점"></a></span>
+          </div>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+        </div>
+      </figure>
+    </div>
 </section>
-<section class="main-new-movie-trailers">
-<div class="container">
-<h1>NEW MOVIE TRAILERS</h1>
-<div id="main-new-movie-trailers-carousel">
-  <ul>
-    <li><a href></a></li>
-    <li><a href></a></li>
-    <li><a href></a></li>
-    <li><a href></a></li>
-    <li><a href></a></li>
-  </ul>
-  <div>
-    <figure>
-      <img src="img/photo-main-video-1.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-2.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-1.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-1.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-1.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-2.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-1.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-2.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-1.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-1.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-1.png" alt="">
-    </figure>
-    <figure>
-      <img src="img/photo-main-video-2.png" alt="">
-    </figure>
+
+
   </main>
 </body>
 </html>

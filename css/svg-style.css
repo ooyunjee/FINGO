@@ -16,6 +16,7 @@ svg:hover #border-box{
   stroke-dashoffset: 0;
   stroke-dasharray: 700;
   stroke-width: 3;
+  opacity: 0;
 }
 svg g path{
   transition: all 1.5s ease-out;

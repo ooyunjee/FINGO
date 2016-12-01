@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b9b9b9;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon-crown-02.svg" class="cls-1" d="M1177,1082l3.78,5h-7.56Zm0.22,5,3.78-5v5h-3.78Zm-0.58,0-3.64-5v5h3.64Z" transform="translate(-1173 -1082)"/>
+</svg>
