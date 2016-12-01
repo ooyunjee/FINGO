@@ -781,6 +781,16 @@ body {
   }
 }
 
+@media (max-width: 750px) {
+  .nav .logo .main-menu-btn {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    z-index: 30;
+  }
+}
+
 .nav .logo .main-menu-btn a {
   width: 100%;
   height: auto;
@@ -827,19 +837,40 @@ body {
   }
 }
 
+@media (max-width: 750px) {
+  .nav ul {
+    width: 120%;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: -10%;
+    text-align: center;
+    background: rgba(30, 30, 30, 0.9);
+  }
+}
+
 .nav ul li {
   display: inline-block;
 }
 
 @media (min-width: 751px) and (max-width: 1024px) {
   .nav ul li {
+    display: block;
+    position: relative;
+    top: 80px;
+  }
+}
+
+@media (max-width: 750px) {
+  .nav ul li {
+    display: block;
     position: relative;
     top: 80px;
   }
 }
 
 .nav ul li a {
-  display: block;
+  display: line-block;
   font-size: 16px;
   margin-right: 40px;
   color: #fff;
@@ -855,7 +886,20 @@ body {
   }
 }
 
+@media (max-width: 750px) {
+  .nav ul li a {
+    font-size: 25px;
+    font-weight: normal;
+  }
+}
+
 @media (min-width: 751px) and (max-width: 1024px) {
+  .nav ul li a:hover {
+    color: #c6a471;
+  }
+}
+
+@media (max-width: 750px) {
   .nav ul li a:hover {
     color: #c6a471;
   }
@@ -876,7 +920,17 @@ body {
 
 @media (min-width: 751px) and (max-width: 1024px) {
   .nav ul li a::after {
-    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  .nav ul li a::after {
+    position: absolute;
+    top: 35px;
+    left: 0px;
   }
 }
 
@@ -911,6 +965,13 @@ body {
 @media (min-width: 751px) and (max-width: 1024px) {
   .nav form input {
     width: 300px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 750px) {
+  .nav form input {
+    width: 200px;
     height: 35px;
   }
 }
@@ -963,6 +1024,6 @@ body {
 header {
   width: 100%;
   height: 450px;
-  background: #ddd;
+  background: #444;
   color: #fff;
 }

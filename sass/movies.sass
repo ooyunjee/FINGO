@@ -28,7 +28,6 @@ body
     width: percentage($m-container-width/$bp-mobile)
 
 
-
 // * --------------------------------
 // * Nav
 // * --------------------------------
@@ -49,6 +48,11 @@ body
         display: block
         +position(absolute, top 40px right 0px)
         z-index: 30
+      +mobile
+        display: block
+        +position(absolute, top 40px right 0px)
+        z-index: 30
+
       a
         +size(100% auto)
         span
@@ -77,13 +81,24 @@ body
       +position(absolute, top 0 left -10%)
       text-align: center
       background: rgba(#1e1e1e, 0.9)
+    +mobile
+      +size(120% 450px)
+      +position(absolute, top 0 left -10%)
+      text-align: center
+      background: rgba(#1e1e1e, 0.9)
+
 
     li
       display: inline-block
       +tablet
-        +position(relative, top 80px)
-      a
         display: block
+        +position(relative, top 80px)
+      +mobile
+        display: block
+        +position(relative, top 80px)
+
+      a
+        display: line-block
         font-size: 16px
         +margin(right 40px)
         color: $fingo-white
@@ -93,8 +108,13 @@ body
         +tablet
           font-size: 25px
           font-weight: normal
+        +mobile
+          font-size: 25px
+          font-weight: normal
         &:hover
           +tablet
+            color: $fingo-mian-color
+          +mobile
             color: $fingo-mian-color
         &::after
           content: ""
@@ -105,7 +125,10 @@ body
           transition: all 0.3s
           transform: scaleX(0)
           +tablet
-            display: none
+            +position(absolute,top 35px left 0px)
+          +mobile
+            +position(absolute,top 35px left 0px)
+
         &:hover::after
           transform: scaleX(1)
 
@@ -119,6 +142,8 @@ body
       +size(350px 35px)
       +tablet
         +size(300px 35px)
+      +mobile
+        +size(200px 35px)
       +padding(left 20px)
       +background(color rgba(#161616, 0.5))
       border-radius: 50px
@@ -155,5 +180,5 @@ body
 // * --------------------------------
 header
   +size(100% 450px)
-  background: #ddd
+  background: #444
   color: #fff
