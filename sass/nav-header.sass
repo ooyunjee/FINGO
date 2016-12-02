@@ -38,8 +38,8 @@ body
   position: fixed
   +size(100% 100px)
   // +background(color $fingo-bg-dark)
-  z-index: 10
-  .logo
+  z-index: 1000000
+  .nav-logo
     >h1
       display: inline-block
       +margin(top 29px)
@@ -70,7 +70,7 @@ body
     button
       +position(absolute, top 7px right 20px)
 
-  .profile
+  .nav-profile
     +position(absolute, top 28px right 0)
     h1
       @extend %a11y-hidden
@@ -84,94 +84,94 @@ body
 // * --------------------------------
 // * Header
 // * --------------------------------
-.header
-  +size(100% 100vh)
-  position: relative
-  z-index: 0
-  .visual-01
-    img
-      +size(100% auto)
-    .visual
-      height: 100vh
-      position: absolute
-      left: 50%
-      transform: translateX(-50%)
-      .visual-text
-        +position(absolute, top 50% left 0)
-        transform: translateY(-50%)
-        width: 350px
-        text-align: left
-        margin-left: 80px
-        h1
-          color: $fingo-white
-          font-size: 60px
-          font-weight: bold
-          line-height: 70px
-          +margin(bottom 20px)
-        p
-          color: $fingo-white
-          font-size: 16px
-          +margin(bottom 20px)
-
-        a
-          display: block
-          border: 1px solid #fff
-          +size(125px 30px)
-          color: $fingo-white
-          font-size: 14px
-          line-height: 30px
-          text-align: center
-      .arrow
-        .left-arrow
-          background-color: #ddd
-          transform: translateY(-50%)
-          +position(absolute, top 50% left -50px)
-        .right-arrow
-          background-color: #ddd
-          transform: translateY(-50%)
-          +position(absolute, top 50% right -50px)
-      .visual-dots
-        +position(absolute, top 0 left 0)
-
-// * --------------------------------
-// * Footer
-// * --------------------------------
-footer
-  +size(100% 150px)
-  background: $fingo-bg-dark
-  a
-    color: $fingo-white
-  .container
-    padding-top: 40px
-    .footer-logo
-      float: left
-      margin-right: 50px
-    .footer-copyright
-      +position(relative, top 5px)
-      width: 250px
-      float: left
-      p
-        font-size: 14px
-      span
-        font-size: 12px
-        font-weight: lighter
-  .footer-sns-group
-    float: right
-    a
-      +size(45px)
-      +margin(left 15px)
-      position: relative
-      display: inline-block
-      background: $fingo-font-33
-      border-radius: 50%
-      img
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-    .footer-sns-facebook
-      &:hover
-        background: #203571
-    .footer-sns-twitter
-      &:hover
-        background: #30758b
+// .header
+//   +size(100% 100vh)
+//   position: relative
+//   z-index: 0
+//   .visual-01
+//     img
+//       +size(100% auto)
+//     .visual
+//       height: 100vh
+//       position: absolute
+//       left: 50%
+//       transform: translateX(-50%)
+//       .visual-text
+//         +position(absolute, top 50% left 0)
+//         transform: translateY(-50%)
+//         width: 350px
+//         text-align: left
+//         margin-left: 80px
+//         h1
+//           color: $fingo-white
+//           font-size: 60px
+//           font-weight: bold
+//           line-height: 70px
+//           +margin(bottom 20px)
+//         p
+//           color: $fingo-white
+//           font-size: 16px
+//           +margin(bottom 20px)
+//
+//         a
+//           display: block
+//           border: 1px solid #fff
+//           +size(125px 30px)
+//           color: $fingo-white
+//           font-size: 14px
+//           line-height: 30px
+//           text-align: center
+//       .arrow
+//         .left-arrow
+//           background-color: #ddd
+//           transform: translateY(-50%)
+//           +position(absolute, top 50% left -50px)
+//         .right-arrow
+//           background-color: #ddd
+//           transform: translateY(-50%)
+//           +position(absolute, top 50% right -50px)
+//       .visual-dots
+//         +position(absolute, top 0 left 0)
+//
+// // * --------------------------------
+// // * Footer
+// // * --------------------------------
+// footer
+//   +size(100% 150px)
+//   background: $fingo-bg-dark
+//   a
+//     color: $fingo-white
+//   .container
+//     padding-top: 40px
+//     .footer-logo
+//       float: left
+//       margin-right: 50px
+//     .footer-copyright
+//       +position(relative, top 5px)
+//       width: 250px
+//       float: left
+//       p
+//         font-size: 14px
+//       span
+//         font-size: 12px
+//         font-weight: lighter
+//   .footer-sns-group
+//     float: right
+//     a
+//       +size(45px)
+//       +margin(left 15px)
+//       position: relative
+//       display: inline-block
+//       background: $fingo-font-33
+//       border-radius: 50%
+//       img
+//         position: absolute
+//         top: 50%
+//         left: 50%
+//         transform: translate(-50%, -50%)
+//     .footer-sns-facebook
+//       &:hover
+//         background: #203571
+//     .footer-sns-twitter
+//       &:hover
+//         background: #30758b

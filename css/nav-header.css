@@ -259,7 +259,7 @@ template {
   }
 }
 
-.nav .logo > h1 span, .nav form label, .nav .profile h1 {
+.nav .nav-logo > h1 span, .nav form label, .nav .nav-profile h1 {
   overflow: hidden;
   position: absolute;
   clip: rect(0 0 0 0);
@@ -757,10 +757,10 @@ body {
   position: fixed;
   width: 100%;
   height: 100px;
-  z-index: 10;
+  z-index: 1000000;
 }
 
-.nav .logo > h1 {
+.nav .nav-logo > h1 {
   display: inline-block;
   margin-top: 29px;
 }
@@ -805,156 +805,16 @@ body {
   right: 20px;
 }
 
-.nav .profile {
+.nav .nav-profile {
   position: absolute;
   top: 28px;
   right: 0;
 }
 
-.nav .profile p {
+.nav .nav-profile p {
   display: inline-block;
   line-height: 42px;
   color: #fff;
   margin-right: 15px;
   font-style: 16px;
-}
-
-.header {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  z-index: 0;
-}
-
-.header .visual-01 img {
-  width: 100%;
-  height: auto;
-}
-
-.header .visual-01 .visual {
-  height: 100vh;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.header .visual-01 .visual .visual-text {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 350px;
-  text-align: left;
-  margin-left: 80px;
-}
-
-.header .visual-01 .visual .visual-text h1 {
-  color: #fff;
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 70px;
-  margin-bottom: 20px;
-}
-
-.header .visual-01 .visual .visual-text p {
-  color: #fff;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.header .visual-01 .visual .visual-text a {
-  display: block;
-  border: 1px solid #fff;
-  width: 125px;
-  height: 30px;
-  color: #fff;
-  font-size: 14px;
-  line-height: 30px;
-  text-align: center;
-}
-
-.header .visual-01 .visual .arrow .left-arrow {
-  background-color: #ddd;
-  transform: translateY(-50%);
-  position: absolute;
-  top: 50%;
-  left: -50px;
-}
-
-.header .visual-01 .visual .arrow .right-arrow {
-  background-color: #ddd;
-  transform: translateY(-50%);
-  position: absolute;
-  top: 50%;
-  right: -50px;
-}
-
-.header .visual-01 .visual .visual-dots {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-footer {
-  width: 100%;
-  height: 150px;
-  background: #161616;
-}
-
-footer a {
-  color: #fff;
-}
-
-footer .container {
-  padding-top: 40px;
-}
-
-footer .container .footer-logo {
-  float: left;
-  margin-right: 50px;
-}
-
-footer .container .footer-copyright {
-  position: relative;
-  top: 5px;
-  width: 250px;
-  float: left;
-}
-
-footer .container .footer-copyright p {
-  font-size: 14px;
-}
-
-footer .container .footer-copyright span {
-  font-size: 12px;
-  font-weight: lighter;
-}
-
-footer .footer-sns-group {
-  float: right;
-}
-
-footer .footer-sns-group a {
-  width: 45px;
-  height: 45px;
-  margin-left: 15px;
-  position: relative;
-  display: inline-block;
-  background: #333;
-  border-radius: 50%;
-}
-
-footer .footer-sns-group a img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-footer .footer-sns-group .footer-sns-facebook:hover {
-  background: #203571;
-}
-
-footer .footer-sns-group .footer-sns-twitter:hover {
-  background: #30758b;
 }
