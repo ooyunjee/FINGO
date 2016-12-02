@@ -716,7 +716,7 @@ template {
 .ui-carousel-tablist .ui-carousel-tab:focus, .ui-carousel-button-group button:focus {
   outline: none;
   outline-offset: 10px;
-  box-shadow: 0 0 0 4px rgba(112, 112, 112, 0.45);
+  box-shadow: 0 0 0 4px rgba(198, 164, 113, 0.5);
   border-radius: 2px;
 }
 
@@ -764,6 +764,8 @@ div {
 
 .ui-carousel {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ui-carousel-mask {
@@ -788,27 +790,31 @@ div {
 
 .ui-carousel-tablist {
   position: absolute;
-  z-index: 1000;
+  z-index: 100000;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .ui-carousel-tablist ul {
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
 }
 
 .ui-carousel-tablist li {
-  margin-left: 8px;
-  margin-right: 8px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .ui-carousel-tablist li.active .ui-carousel-tab {
   position: relative;
-  top: -1px;
+  top: 1px;
   background: #fff;
   border: 1px solid #fff;
+  width: 25px;
+  height: 10px;
+  border-radius: 10px;
 }
 
 .ui-carousel-tablist .ui-carousel-tab {
@@ -826,7 +832,7 @@ div {
 }
 
 .ui-carousel-tablist .ui-carousel-tab:hover {
-  color: #44ace2;
+  color: #c6a471;
 }
 
 .ui-carousel-button-group button {
@@ -836,7 +842,7 @@ div {
   cursor: pointer;
   opacity: 1;
   position: absolute;
-  z-index: 1000;
+  z-index: 100000;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -850,30 +856,41 @@ div {
   position: absolute;
   width: 20px;
   height: 20px;
+  transition: all 0.2s ease-in-out;
 }
 
 .ui-carousel-button-group .ui-carousel-prev-button {
-  left: -50px;
+  left: -55px;
 }
 
 .ui-carousel-button-group .ui-carousel-prev-button::before {
   top: 50%;
-  left: 50%;
+  left: calc(50% + 5px);
   transform: translate(-50%, -50%) rotate(-45deg);
-  border-top: 2px solid #8b8b8b;
-  border-left: 2px solid #8b8b8b;
+  border-top: 3px solid #8b8b8b;
+  border-left: 3px solid #8b8b8b;
+}
+
+.ui-carousel-button-group .ui-carousel-prev-button:hover::before {
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
 }
 
 .ui-carousel-button-group .ui-carousel-next-button {
-  right: -50px;
+  right: -55px;
 }
 
 .ui-carousel-button-group .ui-carousel-next-button::before {
   top: 50%;
-  left: 50%;
+  left: calc(50% - 5px);
   transform: translate(-50%, -50%) rotate(45deg);
-  border-top: 2px solid #8b8b8b;
-  border-right: 2px solid #8b8b8b;
+  border-top: 3px solid #8b8b8b;
+  border-right: 3px solid #8b8b8b;
+}
+
+.ui-carousel-button-group .ui-carousel-next-button:hover::before {
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
 }
 
 .ui-carousel-tabpanel-wrapper {
