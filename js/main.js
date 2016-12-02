@@ -4,7 +4,8 @@
   var $caro = $('#main-box-office-carousel').fingoCarousel({
     'height': 530,
     'index': 2,
-    'col': 5
+    'col': 5,
+    'margin': 20
   });
 
   var $caro2 = $('#main-movie-ranking-carousel').fingoCarousel({
@@ -12,6 +13,7 @@
     'count': 5,
     'col': 5,
     'row': 2,
+    'margin': 20,
     'infinite': false
   });
 
@@ -19,11 +21,12 @@
     'height': 225,
     'count': 3,
     'col': 3,
+    'margin': 20,
     'infinite': false
   });
 
   var $caro4 = $('#main-header-carousel').fingoCarousel({
-    'width': 1620,
+    'width': 1640,
     'height': 850,
     'infinite': false
   });
@@ -49,12 +52,12 @@
 
       if(index === 0) {
         btn.addEventListener('click', function(e) {
-          e.preventDefault();
+          if(e) { e.preventDefault(); }
           console.log('like');
         });
       } else if(index === 1) {
         btn.addEventListener('click', function(e) {
-          e.preventDefault();
+          if(e) { e.preventDefault(); }
           console.log('comment');
         });
       }

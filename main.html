@@ -15,7 +15,7 @@
 </head>
 <body>
   <nav class="nav">
-    <div class="logo container">
+    <div class="nav-logo container">
       <h1>
         <span>FINGO</span>
         <a href="#">
@@ -29,7 +29,7 @@
         </svg>
         </a>
       </h1>
-      <ul class="main-menu">
+      <ul class="nav-main-menu">
         <li><a href="#">박스 오피스</a></li>
         <li><a href="#">추천영화</a></li>
         <li><a href="#">평가늘리기</a></li>
@@ -39,7 +39,7 @@
         <input type="search" placeholder="Search" required name="" value="">
         <button type="submit" name="button" required><img src="./img/icon-search.svg" alt="검색버튼"></button>
       </form>
-      <div class="profile">
+      <div class="nav-profile">
         <a href="#">
           <h1>프로필</h1>
           <p>이름</p>
@@ -48,18 +48,19 @@
       </div>
     </div>
   </nav>
-  <header class="header">
+  <header class="main-header">
     <div id="main-header-carousel" class="main-header-carousel">
       <ul>
         <li><a href></a></li>
         <li><a href></a></li>
+        <li><a href></a></li>
       </ul>
       <div>
-        <div>
+        <figure>
           <img src="./img/photo-main-carousel-1.jpg" alt="">
-          <!-- <div class="container visual">
-            <div class="visual-text">
-              <h1>신비한<br />동물사전</h1>
+          <div class="container">
+            <div class="main-header-carousel-contents">
+              <h3><a href="">신비한 동물사전</a></h3>
               <p>평균 별점 : 3.9 , 예매율 : 66.11%<br />
                 2016, 미국, 판타지, 12세 관람가, 2시간 13분<br />
                 배우 : 에디 레드메인, 콜린 파렐, 캐서린 워터스턴<br />
@@ -67,24 +68,13 @@
                 </p>
               <a href="#">예매하기</a>
             </div>
-            <div class="arrow">
-              <button class="left-arrow"><img src="./img/icon-left-arrow.svg" alt="왼쪽방향 이동 화살표"></button>
-              <button class="right-arrow"><img src="./img/icon-right-arrow.svg" alt="오른쪽방향 이동 화살표"></button>
-            </div>
-            <div class="visual-dots">
-              <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-              </ul>
-            </div>
-          </div> -->
-        </div>
-        <div>
+          </div>
+        </figure>
+        <figure>
           <img src="./img/photo-main-carousel-2.jpg" alt="">
-          <!-- <div class="container visual">
-            <div class="visual-text">
-              <h1>신비한<br />동물사전</h1>
+          <div class="container">
+            <div class="main-header-carousel-contents">
+              <h3><a href="">가려진 시간</a></h3>
               <p>평균 별점 : 3.9 , 예매율 : 66.11%<br />
                 2016, 미국, 판타지, 12세 관람가, 2시간 13분<br />
                 배우 : 에디 레드메인, 콜린 파렐, 캐서린 워터스턴<br />
@@ -92,23 +82,26 @@
                 </p>
               <a href="#">예매하기</a>
             </div>
-            <div class="arrow">
-              <button class="left-arrow"><img src="./img/icon-left-arrow.svg" alt="왼쪽방향 이동 화살표"></button>
-              <button class="right-arrow"><img src="./img/icon-right-arrow.svg" alt="오른쪽방향 이동 화살표"></button>
+          </div>
+        </figure>
+        <figure>
+          <img src="./img/photo-main-carousel-1.jpg" alt="">
+          <div class="container">
+            <div class="main-header-carousel-contents">
+              <h3><a href="">신비한 동물사전</a></h3>
+              <p>평균 별점 : 3.9 , 예매율 : 66.11%<br />
+                2016, 미국, 판타지, 12세 관람가, 2시간 13분<br />
+                배우 : 에디 레드메인, 콜린 파렐, 캐서린 워터스턴<br />
+                감독 : 데이빗 예이츠
+                </p>
+              <a href="#">예매하기</a>
             </div>
-            <div class="visual-dots">
-              <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-              </ul>
-            </div>
-          </div> -->
-        </div>
+          </div>
+        </figure>
       </div>
     </div>
   </header>
-  <main>
+  <main class="main-main">
     <section class="main-box-office">
       <div class="container">
         <h1>BOX OFFCE</h1>
@@ -122,59 +115,61 @@
             <li><a href></a></li>
           </ul>
           <div>
-            <figure class="active">
-              <a href="#"><img src="img/photo-main-poster-4.png" alt="">
+            <figure class="1">
+              <a href="#">
+                <img src="img/photo-main-poster-4.png" alt="">
                 <p class="box-office-rank"><span>1위</span>  신비한 동물사전</p>
                 <div class="hover">
                   <p>신비한 동물사전</p>
                   <p class="stars">별 별 별 별 별</p>
-                  <button type="button">보고싶어요</button>
-                  <button type="button">코멘트 쓰기</button>
-                </div></a>
+                  <button type="button" class="active">보고싶어요</button>
+                  <button type="button" class="active">코멘트 쓰기</button>
+                </div>
+              </a>
             </figure>
-            <figure >
+            <figure class="2">
               <a href="#"><img src="img/photo-main-poster-5.png" alt="">
                 <p class="box-office-rank"><span>2위</span>  닥터 스크레인지</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>닥터 스크레인지</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure>
+            <figure class="3">
               <a href="#"><img src="img/photo-main-poster-1.png" alt="">
                 <p class="box-office-rank"><span>3위</span>  스타트랙 비욘드</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>스타트랙 비욘드</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure>
+            <figure class="4">
               <a href="#">
                 <img src="img/photo-main-poster-2.png" alt="">
                 <p class="box-office-rank"><span>4위</span>  연애담</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>연애담</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div>
               </a>
             </figure>
-            <figure>
+            <figure class="5">
               <a href="#"><img src="img/photo-main-poster-3.png" alt="">
                 <p class="box-office-rank"><span>5위</span>  세상에서 고양이가 사라진다면</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>세상에서 고양이가 사라진다면</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure class="active">
+            <figure class="6">
               <a href="#"><img src="img/photo-main-poster-4.png" alt="">
                 <p class="box-office-rank"><span>6위</span>  신비한 동물사전</p>
                 <div class="hover">
@@ -184,49 +179,49 @@
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure >
+            <figure class="7">
               <a href="#"><img src="img/photo-main-poster-5.png" alt="">
                 <p class="box-office-rank"><span>7위</span>  닥터 스크레인지</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>닥터 스크레인지</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure >
+            <figure class="8">
               <a href="#"><img src="img/photo-main-poster-1.png" alt="">
                 <p class="box-office-rank"><span>8위</span>  스타트랙 비욘드</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>스타트랙 비욘드</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure>
+            <figure class="9">
               <a href="#">
                 <img src="img/photo-main-poster-2.png" alt="">
                 <p class="box-office-rank"><span>9위</span>  연애담</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>연애담</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div>
               </a>
             </figure>
-            <figure>
+            <figure class="10">
               <a href="#"><img src="img/photo-main-poster-3.png" alt="">
                 <p class="box-office-rank"><span>10위</span>  세상에서 고양이가 사라진다면</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>세상에서 고양이가 사라진다면</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure class="active">
+            <figure class="11">
               <a href="#"><img src="img/photo-main-poster-4.png" alt="">
                 <p class="box-office-rank"><span>11위</span>  신비한 동물사전</p>
                 <div class="hover">
@@ -236,49 +231,49 @@
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure >
+            <figure class="12">
               <a href="#"><img src="img/photo-main-poster-5.png" alt="">
                 <p class="box-office-rank"><span>12위</span>  닥터 스크레인지</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>닥터 스크레인지</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure>
+            <figure class="13">
               <a href="#"><img src="img/photo-main-poster-1.png" alt="">
                 <p class="box-office-rank"><span>13위</span>  스타트랙 비욘드</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>스타트랙 비욘드</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure>
+            <figure class="14">
               <a href="#">
                 <img src="img/photo-main-poster-2.png" alt="">
                 <p class="box-office-rank"><span>14위</span>  연애담</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>연애담</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div>
               </a>
             </figure>
-            <figure>
+            <figure class="15">
               <a href="#"><img src="img/photo-main-poster-3.png" alt="">
                 <p class="box-office-rank"><span>15위</span>  세상에서 고양이가 사라진다면</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>세상에서 고양이가 사라진다면</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure class="active">
+            <figure class="16">
               <a href="#"><img src="img/photo-main-poster-4.png" alt="">
                 <p class="box-office-rank"><span>16위</span>  신비한 동물사전</p>
                 <div class="hover">
@@ -288,43 +283,43 @@
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure >
+            <figure class="17">
               <a href="#"><img src="img/photo-main-poster-5.png" alt="">
                 <p class="box-office-rank"><span>17위</span>  닥터 스크레인지</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>닥터 스크레인지</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure >
+            <figure class="18">
               <a href="#"><img src="img/photo-main-poster-1.png" alt="">
                 <p class="box-office-rank"><span>18위</span>  스타트랙 비욘드</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>스타트랙 비욘드</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
-            <figure>
+            <figure class="19">
               <a href="#">
                 <img src="img/photo-main-poster-2.png" alt="">
                 <p class="box-office-rank"><span>19위</span>  연애담</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>연애담</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
                 </div>
               </a>
             </figure>
-            <figure>
+            <figure class="20">
               <a href="#"><img src="img/photo-main-poster-3.png" alt="">
                 <p class="box-office-rank"><span>20위</span>  세상에서 고양이가 사라진다면</p>
                 <div class="hover">
-                  <p>신비한 동물사전</p>
+                  <p>세상에서 고양이가 사라진다면</p>
                   <p class="stars">별 별 별 별 별</p>
                   <button type="button">보고싶어요</button>
                   <button type="button">코멘트 쓰기</button>
@@ -339,8 +334,7 @@
       <div class="container">
         <h1 class="a11y">영화 순위</h1>
         <div class="main-movie-ranking-btn-group">
-          <button type="button">국내 누적관객수 TOP 영화</button>
-          <button type="button">전문가 고평점 영화</button>
+          <button type="button" class="active">국내 누적관객수 TOP 영화</button><button type="button">전문가 고평점 영화</button>
         </div>
         <div id="main-movie-ranking-carousel">
           <ul>
@@ -531,6 +525,24 @@
                   <button type="button">코멘트 쓰기</button>
                 </div></a>
             </figure>
+            <figure class="top-1 left-11">
+              <a href="#"><img src="img/photo-main-poster-5.png" alt="">
+                <div class="hover">
+                  <p>신비한 동물사전</p>
+                  <p class="stars">별 별 별 별 별</p>
+                  <button type="button">보고싶어요</button>
+                  <button type="button">코멘트 쓰기</button>
+                </div></a>
+            </figure>
+            <figure class="top-2 left-11">
+              <a href="#"><img src="img/photo-main-poster-1.png" alt="">
+                <div class="hover">
+                  <p>신비한 동물사전</p>
+                  <p class="stars">별 별 별 별 별</p>
+                  <button type="button">보고싶어요</button>
+                  <button type="button">코멘트 쓰기</button>
+                </div></a>
+            </figure>
           </div>
         </div>
       </div>
@@ -547,39 +559,39 @@
             <li><a href></a></li>
           </ul>
           <div>
-            <figure>
+            <div>
               <img src="img/photo-main-video-1.png" alt="">
-            </figure>
-            <figure>
+            </div>
+            <div>
               <img src="img/photo-main-video-1.png" alt="">
-            </figure>
-            <figure>
+            </div>
+            <div>
               <img src="img/photo-main-video-1.png" alt="">
-            </figure>
-            <figure>
+            </div>
+            <div>
               <img src="img/photo-main-video-2.png" alt="">
-            </figure>
-            <figure>
+            </div>
+            <div>
               <img src="img/photo-main-video-2.png" alt="">
-            </figure>
-            <figure>
+            </div>
+            <div>
               <img src="img/photo-main-video-2.png" alt="">
-            </figure>
-            <figure>
+            </div>
+            <div>
               <img src="img/photo-main-video-1.png" alt="">
-            </figure>
-            <figure>
+            </div>
+            <div>
               <img src="img/photo-main-video-1.png" alt="">
-            </figure>
-            <figure>
+            </div>
+            <div>
               <img src="img/photo-main-video-1.png" alt="">
-            </figure>
-            <figure>
+            </div>
+            <div>
               <img src="img/photo-main-video-2.png" alt="">
-            </figure>
-            <figure>
+            </div>
+            <div>
               <img src="img/photo-main-video-2.png" alt="">
-            </figure>
+            </div>
           </div>
         </div>
       </div>
