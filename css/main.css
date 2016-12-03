@@ -815,10 +815,6 @@ body {
   height: 51.82927%;
 }
 
-.main-header:hover .ui-carousel-button-group {
-  display: block;
-}
-
 .main-header .ui-carousel-tabpanel {
   position: relative;
 }
@@ -829,10 +825,6 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.main-header .ui-carousel-button-group {
-  display: none;
 }
 
 .main-header .ui-carousel-button-group .ui-carousel-prev-button {
@@ -945,18 +937,6 @@ body {
 
 .main-main .ui-carousel-tablist {
   display: none;
-}
-
-@media (min-width: 751px) and (max-width: 1024px) {
-  .main-main .ui-carousel-tabpanel {
-    width: 22.65625%;
-  }
-}
-
-@media (max-width: 750px) {
-  .main-main .ui-carousel-tabpanel {
-    width: 85.33333%;
-  }
 }
 
 .main-main .ui-carousel-tabpanel .ui-carousel-image {

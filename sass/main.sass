@@ -101,9 +101,6 @@ body
 // * --------------------------------
 .main-header
   +size(100% percentage(850px / 1640px))
-  &:hover
-    .ui-carousel-button-group
-      display: block
   .ui-carousel-tabpanel
     position: relative
   .ui-carousel-image
@@ -111,7 +108,6 @@ body
     +position(absolute, top 50%)
     transform: translateY(-50%)
   .ui-carousel-button-group
-    display: none
     .ui-carousel-prev-button
       left: 30px
     .ui-carousel-next-button
@@ -184,10 +180,10 @@ body
   .ui-carousel-tablist
     display: none
   .ui-carousel-tabpanel
-    +tablet
-      width: percentage($carousel-image-width/$bp-tablet)
-    +mobile
-      width: percentage($m-container-width/$bp-mobile)
+    // +tablet
+    //   width: percentage($carousel-image-width/$bp-tablet)
+    // +mobile
+    //   width: percentage($m-container-width/$bp-mobile)
     .ui-carousel-image
       +size(100% auto)
     .hover
