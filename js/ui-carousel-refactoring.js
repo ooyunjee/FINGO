@@ -198,7 +198,7 @@
       // tabs event
       $.each($tabs, function(index) {
         var $tab = $tabs.eq(index);
-        $tab.on('click', $.proxy(widget.viewTabpanel, widget, index, null, null));
+        $tab.on('click', $.proxy(widget.viewTabpanel, widget, index, null));
       });
     },
 
