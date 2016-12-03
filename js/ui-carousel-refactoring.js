@@ -83,12 +83,10 @@
       this.$carousel_content = this.$carousel_tabpanels.children().parent();
       this.$carousel_tabpanel_content_imgs = this.$carousel.children().last().find('img').not('.icon');
 
-      // 반응형
-      this.setResponsive();
-      // // 동적으로 캐러셀 구조 생성/추가
+      // 동적으로 캐러셀 구조 생성/추가
       this.createPrevNextButtons();
       this.createCarouselMask();
-      // // 역할별 스타일링 되는 클래스 설정
+      // 역할별 스타일링 되는 클래스 설정
       this.settingClass();
       this.settingSliding();
     },
@@ -151,7 +149,6 @@
           .height($carousel.height())
       } else {
         $tabpanel
-          // .width(carousel_tabpannel_width)
           .css('margin-right', this.carousel_content_margin);
       }
 
@@ -274,37 +271,7 @@
     },
 
     'setResponsive': function() {
-      if(global.innerWidth <= 750) {
-        switch(this.carousel_count) {
-          case 1:
-            this.carousel_count = this.settings.count;
-            break;
-          case 3:
-            this.carousel_count = 1;
-            break;
-          case 5:
-            this.carousel_count = 1;
-            break;
-        }
-        this.start_tabpanel_index = 0;
-      } else if(global.innerWidth <= 1024) {
-        switch(this.carousel_count) {
-            case 1:
-              this.carousel_count = this.settings.count;
-              break;
-            case 3:
-              this.carousel_count = 2;
-              break;
-            case 5:
-              this.carousel_count = 3;
-              break;
-        }
-        console.log(this.start_tabpanel_index);
-        this.start_tabpanel_index = this.settings.index - 1;
 
-      } else {
-        this.carousel_count = this.settings.count;
-      }
     }
   };
 
