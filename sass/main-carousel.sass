@@ -1,0 +1,131 @@
+@import ./config/fingo-colors
+@import ../Modules/sass/style
+
+$carousel-image-width : 232px
+
+// ------------------------------------------------
+// Main page - Header Carousel
+// ------------------------------------------------
+.main-header
+  .ui-carousel-tablist
+    +tablet
+      display: none
+    +mobile
+      display: none
+  .ui-carousel-tabpanel
+    position: relative
+  .ui-carousel-image
+    +size(100% auto)
+    +position(absolute, top 50%)
+    transform: translateY(-50%)
+  .ui-carousel-button-group
+    button
+      +tablet
+        top: 85%
+      +mobile
+        top: 85%
+    .ui-carousel-prev-button
+      left: 30px
+      +tablet
+        left: percentage(860px / 1024px)
+      +mobile
+        left: percentage(580px / 720px)
+    .ui-carousel-next-button
+      right: 30px
+      +tablet
+        right: percentage(50px / 1024px)
+      +mobile
+        right: percentage(40px / 720px)
+  .ui-carousel-mask
+    &::after
+      content: ''
+      display: block
+      +size(100% 100%)
+      +position(absolute, top 0 left 0 z-index 10)
+      background: radial-gradient(transparent 60%, $fingo-bg-light 90%)
+
+// ------------------------------------------------
+// Main page - Main Carousel
+// ------------------------------------------------
+.main-main
+  .ui-carousel
+    width: 1240px
+    +tablet
+      width: percentage($t-container-width/$bp-tablet)
+    +mobile
+      width: percentage($m-container-width/$bp-mobile)
+    .ui-carousel-mask
+      +tablet
+        width: 736px
+      +mobile
+        width: 484px
+  .ui-carousel-tablist
+    display: none
+  .ui-carousel-tabpanel
+    // +tablet
+    //   width: percentage($carousel-image-width/$bp-tablet)
+    // +mobile
+    //   width: percentage($m-container-width/$bp-mobile)
+    .ui-carousel-image
+      +size(100% auto)
+
+// ------------------------------------------------
+// Main page - Main Box Office
+// ------------------------------------------------
+
+  .main-box-office
+    .ui-carousel-mask
+      +mobile
+        +size(301px)
+    .ui-carousel-tabpanel
+      position: relative
+      +size($carousel-image-width auto)
+    .ui-carousel-tabpanel-wrapper
+      +padding(top 55px)
+      text-align: center
+      color: $fingo-white
+    .ui-carousel-tabpanel
+      transform: scale(1)
+      transition: all 0.3s ease-in-out
+      .ui-carousel-image
+        opacity: 0.5
+      .box-office-rank
+        +margin(top 20px)
+        font-weight: normal
+        span
+          color: $fingo-mian-color
+      &.active
+        position: relative
+        z-index: 1000
+        opacity: 1
+        transform: scale(1.3)
+        box-shadow: 0 0 30px 5px $fingo-bg-dark
+        .ui-carousel-image
+          position: relative
+          z-index: 1000
+          opacity: 1
+
+// ------------------------------------------------
+// Main page - Main Movie Ranking
+// ------------------------------------------------
+
+  .main-movie-ranking
+    .ui-carousel-tabpanel-wrapper
+      position: relative
+    .ui-carousel-tabpanel
+      text-align: center
+      +size($carousel-image-width auto)
+
+// ------------------------------------------------
+// Main page - Main New Movie Trailers
+// ------------------------------------------------
+
+  .main-new-movie-trailers
+    .ui-carousel-tabpanel
+      +size(400px 225px)
+      +tablet
+        +size(358px 225px)
+      +mobile
+        +size(484px 225px)
+    .ui-carousel-image
+      +size(100% auto)
