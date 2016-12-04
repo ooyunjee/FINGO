@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="26" viewBox="0 0 13 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ddd;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="left-ster.svg" class="cls-1" d="M636,680v22.038L627.965,706l1.1-9.259L623,689.931l8.715-1.76L636,680" transform="translate(-623 -680)"/>
+</svg>
