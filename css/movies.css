@@ -748,11 +748,15 @@ body {
   }
 }
 
+.nav-active {
+  background-color: #161616;
+}
+
 .nav {
   position: fixed;
   width: 100%;
   height: 100px;
-  z-index: 10;
+  z-index: 100;
 }
 
 .nav .logo {
@@ -788,12 +792,12 @@ body {
   }
 }
 
-.nav .logo .main-menu-btn a {
+.nav .logo .main-menu-btn button {
   width: 100%;
   height: auto;
 }
 
-.nav .logo .main-menu-btn a span {
+.nav .logo .main-menu-btn button span {
   display: block;
   width: 30px;
   height: 1px;
@@ -802,16 +806,16 @@ body {
   transition: all 0.3s;
 }
 
-.nav .logo .main-menu-btn:hover span:nth-child(2),
-.nav .logo .main-menu-btn:hover span:nth-child(3) {
+.nav .logo .main-menu-btn-active span:nth-child(2),
+.nav .logo .main-menu-btn-active span:nth-child(3) {
   opacity: 0;
 }
 
-.nav .logo .main-menu-btn:hover span:nth-child(1) {
+.nav .logo .main-menu-btn-active span:nth-child(1) {
   transform: translateY(10px) rotate(45deg) scale(1.4);
 }
 
-.nav .logo .main-menu-btn:hover span:nth-child(4) {
+.nav .logo .main-menu-btn-active span:nth-child(4) {
   transform: translateY(-8px) rotate(-45deg) scale(1.4);
 }
 
@@ -820,6 +824,7 @@ body {
   top: 0;
   left: 135px;
   z-index: 20;
+  transition: 0.5s all;
 }
 
 @media (min-width: 751px) and (max-width: 1024px) {
@@ -827,7 +832,7 @@ body {
     width: 120%;
     height: 450px;
     position: absolute;
-    top: 0;
+    top: -450px;
     left: -10%;
     text-align: center;
     background: rgba(30, 30, 30, 0.9);
@@ -839,7 +844,7 @@ body {
     width: 120%;
     height: 450px;
     position: absolute;
-    top: 0;
+    top: -450px;
     left: -10%;
     text-align: center;
     background: rgba(30, 30, 30, 0.9);
@@ -874,21 +879,22 @@ body {
   line-height: 100px;
   position: relative;
   transition: all 0.3s;
+  font-weight: normal;
 }
 
 @media (min-width: 751px) and (max-width: 1024px) {
   .nav ul li a {
     font-size: 25px;
-    font-weight: normal;
     margin-right: 0px;
+    font-weight: lighter;
   }
 }
 
 @media (max-width: 750px) {
   .nav ul li a {
     font-size: 25px;
-    font-weight: normal;
     margin-right: 0px;
+    font-weight: lighter;
   }
 }
 
@@ -919,22 +925,24 @@ body {
 
 @media (min-width: 751px) and (max-width: 1024px) {
   .nav ul li a::after {
-    position: absolute;
-    top: 35px;
-    left: 0px;
+    display: none;
   }
 }
 
 @media (max-width: 750px) {
   .nav ul li a::after {
-    position: absolute;
-    top: 35px;
-    left: 0px;
+    display: none;
   }
 }
 
 .nav ul li a:hover::after {
   transform: scaleX(1);
+}
+
+.nav .main-menu-active {
+  position: absolute;
+  top: 0px;
+  left: -10%;
 }
 
 .nav form {
@@ -962,11 +970,17 @@ body {
 .nav form input {
   width: 350px;
   height: 35px;
+  border: 1px solid #222;
+  transition: 0.3s all;
   padding-left: 20px;
   background-color: rgba(22, 22, 22, 0.5);
   border-radius: 50px;
   color: #ddd;
   position: relative;
+}
+
+.nav form input:hover, .nav form input:focus {
+  border: 1px solid #ddd;
 }
 
 @media (min-width: 751px) and (max-width: 1024px) {
@@ -1235,7 +1249,7 @@ main .sub-menu ul li a {
 .movies .movie-list figure .hover {
   position: absolute;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -1277,6 +1291,9 @@ main .sub-menu ul li a {
 }
 
 .movies .movie-list figure .hover .stars span {
+  background-image: url("../img/icon-star.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 13px;
   height: 26px;
   display: block;
@@ -1287,6 +1304,8 @@ main .sub-menu ul li a {
 
 @media (max-width: 750px) {
   .movies .movie-list figure .hover .stars span {
+    background-image: url("../img/icon-star.svg");
+    background-repeat: no-repeat;
     width: 19px;
     height: 38px;
   }
@@ -1308,6 +1327,7 @@ main .sub-menu ul li a {
 .movies .movie-list figure .hover .stars span a img {
   width: 26px;
   height: 26px;
+  opacity: 0;
 }
 
 @media (max-width: 750px) {
@@ -1318,11 +1338,20 @@ main .sub-menu ul li a {
 }
 
 .movies .movie-list figure .hover .stars span:hover a img {
-  opacity: 0;
+  opacity: 1;
 }
 
 .movies .movie-list figure .hover .stars span:nth-of-type(2n) {
+  background-image: url("../img/icon-star.svg");
+  background-repeat: no-repeat;
+  background-position: -13px 0px;
   margin-right: 10px;
+}
+
+@media (max-width: 750px) {
+  .movies .movie-list figure .hover .stars span:nth-of-type(2n) {
+    background-position: -19px 0px;
+  }
 }
 
 .movies .movie-list figure .hover .stars span:nth-of-type(2n) img {
@@ -1344,7 +1373,6 @@ main .sub-menu ul li a {
 }
 
 .movies .movie-list figure .hover .stars span:nth-of-type(2n)::after {
-  content: url("../img/icon-star-on.svg");
   display: block;
   position: absolute;
   top: 1px;
@@ -1360,7 +1388,6 @@ main .sub-menu ul li a {
 }
 
 .movies .movie-list figure .hover .stars span:nth-of-type(1n)::after {
-  content: url("../img/icon-star-on.svg");
   display: block;
   opacity: 0;
   position: absolute;

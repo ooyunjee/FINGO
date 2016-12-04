@@ -36,10 +36,13 @@ body
 // * --------------------------------
 // * Nav
 // * --------------------------------
+.nav-active
+  +background(color $fingo-bg-dark)
 .nav
   position: fixed
   +size(100% 100px)
-  z-index: 10
+  z-index: 100
+
   .logo
     position: relative
     >h1
@@ -53,12 +56,13 @@ body
         display: block
         +position(absolute, top 40px right 0px)
         z-index: 30
+
       +mobile
         display: block
         +position(absolute, top 40px right 0px)
         z-index: 30
 
-      a
+      button
         +size(100% auto)
         span
           display: block
@@ -66,14 +70,13 @@ body
           +background(color $fingo-white)
           +margin(bottom 5px)
           transition: all 0.3s
-      &:hover span:nth-child(2),
-      &:hover span:nth-child(3)
-        opacity: 0
-      &:hover span:nth-child(1)
-        transform: translateY(10px) rotate(45deg) scale(1.4)
-        // +position(absolute, top 10px left 0)
-      &:hover span:nth-child(4)
-        transform: translateY(-8px) rotate(-45deg) scale(1.4)
+    .main-menu-btn-active span:nth-child(2),
+    .main-menu-btn-active span:nth-child(3)
+      opacity: 0
+    .main-menu-btn-active span:nth-child(1)
+      transform: translateY(10px) rotate(45deg) scale(1.4)
+    .main-menu-btn-active span:nth-child(4)
+      transform: translateY(-8px) rotate(-45deg) scale(1.4)
 
 
 
@@ -81,16 +84,19 @@ body
   ul
     +position(absolute, top 0 left 135px)
     z-index: 20
+    transition: 0.5s all
     +tablet
       +size(120% 450px)
-      +position(absolute, top 0 left -10%)
+      +position(absolute, top -450px left -10%)
       text-align: center
       background: rgba(#1e1e1e, 0.9)
+
     +mobile
       +size(120% 450px)
-      +position(absolute, top 0 left -10%)
+      +position(absolute, top -450px left -10%)
       text-align: center
       background: rgba(#1e1e1e, 0.9)
+
 
 
     li
@@ -110,14 +116,15 @@ body
         line-height: 100px
         position: relative
         transition: all 0.3s
+        font-weight: normal
         +tablet
           font-size: 25px
-          font-weight: normal
           +margin(right 0px)
+          font-weight: lighter
         +mobile
           font-size: 25px
-          font-weight: normal
           +margin(right 0px)
+          font-weight: lighter
         &:hover
           +tablet
             color: $fingo-mian-color
@@ -132,12 +139,18 @@ body
           transition: all 0.3s
           transform: scaleX(0)
           +tablet
-            +position(absolute,top 35px left 0px)
+            display: none
           +mobile
-            +position(absolute,top 35px left 0px)
+            display: none
+
 
         &:hover::after
           transform: scaleX(1)
+  .main-menu-active
+    +position(absolute, top 0px left -10%)
+
+
+
 
   form
     +position(absolute, top 33px right 133px)
@@ -149,6 +162,11 @@ body
       @extend %a11y-hidden
     input
       +size(350px 35px)
+      border: 1px solid $fingo-border
+      transition: 0.3s all
+      &:hover,
+      &:focus
+        border: 1px solid #ddd
       +tablet
         +size(300px 35px)
       +mobile
@@ -318,7 +336,7 @@ main
           +size(350px 500px)
 
       .hover
-        +position(absolute, top 0 z-index 1000)
+        +position(absolute, top 0 z-index 10)
         +size(100% 100%)
         opacity: 0
         cursor: pointer
@@ -339,13 +357,15 @@ main
             +size(230px 38px)
             +margin(top 60px bottom 80px)
           span
+            +background(image url('../img/icon-star.svg') repeat no-repeat size cover)
             +size(13px 26px)
             display: block
             overflow: hidden
             float: left
             position: relative
-            +mobile
 
+            +mobile
+              +background(image url('../img/icon-star.svg') repeat no-repeat)
               +size(19px 38px)
             a
               +size(13px 26px)
@@ -356,18 +376,24 @@ main
                 +size(26px 26px)
                 +mobile
                   +size(38px 38px)
+                opacity: 0
             &:hover a img
-              opacity: 0
+              opacity: 1
             &:nth-of-type(2n)
+              +background(image url('../img/icon-star.svg') position -13px 0px  repeat no-repeat)
               +margin(right 10px)
+              +mobile
+                +background(position -19px 0px)
               img
                 +position(relative,top 0px right 13px)
                 +mobile
                   +position(relative,top 0px right 19px)
+
+
             &:last-child
               +margin(right 0px)
             &:nth-of-type(2n)::after
-              content: url('../img/icon-star-on.svg')
+              // content: url('../img/icon-star-on.svg')
               // background-color: #e7ae5a
               display: block
               +position(absolute, top 1px right 0)
@@ -378,7 +404,7 @@ main
 
                 // transform: scale(1)
             &:nth-of-type(1n)::after
-              content: url('../img/icon-star-on.svg')
+              // content: url('../img/icon-star-on.svg')
               display: block
               opacity: 0
               +position(absolute, top 1px )
