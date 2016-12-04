@@ -1,10 +1,11 @@
 @import "../Modules/sass/style"
-@import "config/reset/normalize"
-@import "config/reset/reset"
+@import "./config/fingo-colors"
+@import "./config/fingo-config"
+@import "./config/fingo-reset"
 
 // reset
 div, input
-  @extend %reset-box-sizing
+  @extend %reset-border-box
 
 button
   @extend %reset-button
@@ -15,21 +16,21 @@ button
 
 // layout
 body
-  +size(100% auto)
   +background(image url(../img/photo-sign-up-bg.jpg) size cover position center center repeat no-repeat)
   color: #fff
 
-.container
-  +size(1240px auto)
-  +margin(0 auto)
-  @media only screen and (min-width: 721px) and (max-width: 1024px)
-    +size(percentage(904px / 1024px) auto)
-  @media only screen and (max-width: 720px)
-    +size(percentage(650px / 720px) auto)
+// .container
+//   +size(1240px auto)
+//   +margin(0 auto)
+//   @media only screen and (min-width: 721px) and (max-width: 1024px)
+//     +size(percentage(904px / 1024px) auto)
+//   @media only screen and (max-width: 720px)
+//     +size(percentage(650px / 720px) auto)
 
 
 header
   +padding(top 30px)
+  +position(absolute, top 0 left 0 right 0)
 
 main
   +size(100% 100vh)
@@ -42,6 +43,18 @@ main
     h1
       +margin(bottom 45px)
       font-size: 26px
+    p
+      +margin(top 40px)
+      +padding(top 40px)
+      border-top: 1px solid rgba($fingo-white, 0.15)
+      font-size: 14px
+    button
+      +size(210px 50px)
+      +margin(top 10px)
+      +background(color #203571)
+      font-size: 16px
+      color: #fff
+      line-height: 50px
     form
       input[type="text"],
       input[type="email"],
@@ -68,30 +81,31 @@ main
             text-align: center
         &:checked + label::before
           content: '\2713'
-          background: #fff
+          +background(color #fff)
           color: #222
-      button
-        +margin(top 40px)
-
       .sign-up-policy
         display: block
         width: 100%
         text-align: left
       button
-        +size(210px 50px)
-        color: #fff
+        +margin(top 40px)
         background: #a38b67
+
 
 footer
   +size(100% 150px)
-  background: #161616
+  +background(color #161616)
   a
     color: #fff
   .container
-    padding-top: 40px
+    +padding(top 40px)
     .footer-logo
+      +margin(right 50px)
       float: left
-      margin-right: 50px
+      +tablet
+        +margin(right 45px)
+      +mobile
+        +margin(right 15px)
     .footer-copyright
       +position(relative, top 5px)
       width: 250px
@@ -111,9 +125,7 @@ footer
       background: #333
       border-radius: 50%
       img
-        position: absolute
-        top: 50%
-        left: 50%
+        +position(absolute, top 50% left 50%)
         transform: translate(-50%, -50%)
     .footer-sns-facebook
       &:hover

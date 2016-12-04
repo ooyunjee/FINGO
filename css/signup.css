@@ -1,17 +1,41 @@
 @charset "UTF-8";
-.a11y {
-  position: absolute;
-  top: -9999em;
-}
-
-div, input {
-  box-sizing: border-box;
-}
-
-button {
-  background: transparent;
+/*! reset.css © joeun, 2016 */
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
   border: 0;
-  cursor: pointer;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
 }
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -217,53 +241,54 @@ template {
   display: none;
 }
 
-/*! reset.css © joeun, 2016 */
-html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
+@media (max-width: 750px) {
+  .m-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1024px) {
+  .t-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .d-hidden {
+    display: none;
+  }
+}
+
+.a11y {
+  position: absolute;
+  top: -9999em;
+}
+
+/*! ui-carousel-refactoring.js © heoyunjee, 2016 */
+div, input {
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
   border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  cursor: pointer;
 }
 
-article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {
-  display: block;
-}
-
-body {
-  line-height: 1.5;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/*! fingo-config.sass © heoyunjee, 2016 */
+/*! fingo-reset.sass © heoyunjee, 2016 */
+button {
+  transition: all 0.2s ease-in-out;
 }
 
 a {
-  text-decoration: none;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  vertical-align: top;
+  transition: all 0.2s ease-in-out;
 }
 
 body {
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
   width: 100%;
   height: auto;
-  background-image: url(../img/photo-sign-up-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  color: #fff;
 }
 
 .container {
@@ -272,22 +297,32 @@ body {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 721px) and (max-width: 1024px) {
+@media (min-width: 751px) and (max-width: 1024px) {
   .container {
-    width: 88.28125%;
-    height: auto;
+    width: 94.14062%;
   }
 }
 
-@media only screen and (max-width: 720px) {
+@media (max-width: 750px) {
   .container {
-    width: 90.27778%;
-    height: auto;
+    width: 85.33333%;
   }
+}
+
+body {
+  background-image: url(../img/photo-sign-up-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
 }
 
 header {
   padding-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 main {
@@ -309,6 +344,23 @@ main .sign-up {
 main .sign-up h1 {
   margin-bottom: 45px;
   font-size: 26px;
+}
+
+main .sign-up p {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 14px;
+}
+
+main .sign-up button {
+  width: 210px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: #203571;
+  font-size: 16px;
+  color: #fff;
+  line-height: 50px;
 }
 
 main .sign-up form input[type="text"],
@@ -346,12 +398,8 @@ main .sign-up form input[type="checkbox"] + label::before {
 
 main .sign-up form input[type="checkbox"]:checked + label::before {
   content: '\2713';
-  background: #fff;
+  background-color: #fff;
   color: #222;
-}
-
-main .sign-up form button {
-  margin-top: 40px;
 }
 
 main .sign-up form .sign-up-policy {
@@ -361,16 +409,14 @@ main .sign-up form .sign-up-policy {
 }
 
 main .sign-up form button {
-  width: 210px;
-  height: 50px;
-  color: #fff;
+  margin-top: 40px;
   background: #a38b67;
 }
 
 footer {
   width: 100%;
   height: 150px;
-  background: #161616;
+  background-color: #161616;
 }
 
 footer a {
@@ -382,8 +428,20 @@ footer .container {
 }
 
 footer .container .footer-logo {
-  float: left;
   margin-right: 50px;
+  float: left;
+}
+
+@media (min-width: 751px) and (max-width: 1024px) {
+  footer .container .footer-logo {
+    margin-right: 45px;
+  }
+}
+
+@media (max-width: 750px) {
+  footer .container .footer-logo {
+    margin-right: 15px;
+  }
 }
 
 footer .container .footer-copyright {
