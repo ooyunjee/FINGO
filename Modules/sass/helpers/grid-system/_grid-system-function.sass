@@ -1,0 +1,27 @@
+/*! ui-carousel-refactoring.js © heoyunjee, 2016 */
+
+// grid-system
+$column-base-width: 87px !default
+$column-count: 12 !default
+$gutter-base-width: 0 !default
+$page-width: ($column-base-width + ($gutter-base-width * 2)) * $column-count
+$fluid: false !default
+$result: 10
+
+@function column($n: 1)
+  $result: ($n * $column-base-width) + (($n - 1) * ($gutter-base-width * 2))
+  @if $fluid
+    $result: percentage($result / $page-width)
+  @return $result
+
+@function push_pull($n: 1)
+  $result: column($n) + ($gutter-base-width * 2)
+  @if $fluid
+    $result: percentage($result / $page-width)
+  @return $result
+
+@function isolate($n: 1)
+  $result: push_pull(($n - 1)) + $gutter-base-width
+  @if $fluid
+    $result: percentage($result / $page-width)
+  @return $result

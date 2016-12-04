@@ -1,0 +1,27 @@
+/*! fingo-grid-system.sass © heoyunjee, 2016 */
+
+$column-base-width: 252px !default
+$row-base-width: 355px !default
+$column-count: 15 !default
+$row-count: 2 !default
+$fluid: false !default
+
+@function top($n: 0)
+  $result: ($n * $row-base-width)
+  @return $result
+
+@function left($n: 0)
+  $result: ($n * $column-base-width)
+  @return $result
+
+/* top *
+@for $i from 1 through $row-count
+  .top-#{$i}
+    position: absolute
+    top: top($i - 1)
+
+/* left */
+@for $i from 1 through $column-count
+  .left-#{$i}
+    position: absolute
+    left: left($i - 1)

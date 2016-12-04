@@ -1,0 +1,19 @@
+/*! fingo-config.sass © heoyunjee, 2016 */
+// @import ./config/fingo-colors
+
+%focus-state
+  outline: none
+  outline-offset: 10px
+  box-shadow: 0 0 0 4px rgba($fingo-mian-color, 0.5)
+  border-radius: 2px
+
+=link($color)
+  color: $color
+  text-decoration: none
+
+=circle($size: 10px, $color: currentColor)
+  display: block
+  width: $size
+  height: $size
+  border-radius: 50%
+  background: $color
