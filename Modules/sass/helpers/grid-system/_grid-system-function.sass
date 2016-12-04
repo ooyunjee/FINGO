@@ -22,7 +22,6 @@ $result: 10
 
 @function isolate($n: 1)
   $result: push_pull(($n - 1)) + $gutter-base-width
-  @debug $result
   @if $fluid
     $result: percentage($result / $page-width)
   @return $result
