@@ -90,6 +90,7 @@
     'infinite': false
   });
 
+
   var main_movie_ranking_btn_group = document.querySelector('.main-movie-ranking-btn-group');
   var active_btns = main_movie_ranking_btn_group.querySelectorAll('button');
 
@@ -131,16 +132,12 @@
   var box_office_list_btn = box_office_list.querySelector('button');
   var ul = box_office_list.querySelector('ul');
 
-  console.log(box_office_list);
-  console.log(box_office_list_btn);
-  console.log(ul);
-
   var index = 1;
   var intervalID = null;
   var $ul = $(ul);
 
 
-
+  // Box Office List 버튼 이벤트 처리
   box_office_list_btn.addEventListener('click', function() {
     box_office_list.classList.toggle('show');
     if(box_office_list.classList.contains('show')) {
@@ -155,6 +152,7 @@
     }
   });
 
+  // Box Office List 롤링 함수
   function rollingList() {
     var list_length = $ul.children().length;
 
@@ -167,6 +165,7 @@
     });
   }
 
+  // Box Office List 롤링 수행
   if(!box_office_list.classList.contains('show')) {
     intervalID = window.setInterval(rollingList, 2500);
   }

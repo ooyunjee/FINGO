@@ -61,22 +61,17 @@ $carousel-image-width : 232px
         width: 484px
   .ui-carousel-tablist
     display: none
-  .ui-carousel-tabpanel
-    // +tablet
-    //   width: percentage($carousel-image-width/$bp-tablet)
-    // +mobile
-    //   width: percentage($m-container-width/$bp-mobile)
-    .ui-carousel-image
-      +size(100% auto)
+  .ui-carousel-image
+    +size(100% auto)
 
 // ------------------------------------------------
 // Main page - Main Box Office
 // ------------------------------------------------
-
+.main-main
   .main-box-office
     .ui-carousel-mask
       +mobile
-        +size(301px)
+        +size(301px auto)
     .ui-carousel-tabpanel
       position: relative
       +size($carousel-image-width auto)
@@ -109,23 +104,23 @@ $carousel-image-width : 232px
 // Main page - Main Movie Ranking
 // ------------------------------------------------
 
-  .main-movie-ranking
-    .ui-carousel-tabpanel-wrapper
-      position: relative
-    .ui-carousel-tabpanel
-      text-align: center
-      +size($carousel-image-width auto)
+.main-movie-ranking
+  .ui-carousel-tabpanel-wrapper
+    position: relative
+  .ui-carousel-tabpanel
+    text-align: center
+    +size($carousel-image-width auto)
 
 // ------------------------------------------------
 // Main page - Main New Movie Trailers
 // ------------------------------------------------
 
-  .main-new-movie-trailers
-    .ui-carousel-tabpanel
-      +size(400px 225px)
-      +tablet
-        +size(358px 225px)
-      +mobile
-        +size(484px 225px)
-    .ui-carousel-image
-      +size(100% auto)
+.main-new-movie-trailers
+  .ui-carousel-tabpanel
+    +size(400px 225px)
+    +tablet
+      +size(358px 225px)
+    +mobile
+      +size(484px 225px)
+  .ui-carousel-image
+    +size(100% auto)
