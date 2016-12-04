@@ -42,7 +42,8 @@
     this.carousel_col                    = this.settings.col;
     this.carousel_content_margin         = this.settings.margin;
     this.active_index                    = 0;
-    this.carousel_one_tab_mask_width     = 0;
+    this.carousel_one_tab                = 0;
+    // this.animating                       = false;
 
     this.$carousel                       = null;
     this.$carousel_headline              = null;
@@ -52,6 +53,7 @@
     this.$carousel_mask                  = null;
     this.$carousel_tabpanels             = null;
     this.$carousel_tabpanel_content_imgs = null;
+    this.$carousel_tabpanel_content_videos = null;
 
     this.start_tabpanel_index = this.settings.index;
 
@@ -82,6 +84,8 @@
       this.$carousel_tabpanels = this.$carousel.children().last().children();
       this.$carousel_content = this.$carousel_tabpanels.children().parent();
       this.$carousel_tabpanel_content_imgs = this.$carousel.children().last().find('img').not('.icon');
+      this.$carousel_tabpanel_content_videos = this.$carousel.children().last().find('iframe');
+      console.log(this.$carousel_tabpanel_content_videos);
 
       // 동적으로 캐러셀 구조 생성/추가
       this.createPrevNextButtons();
@@ -127,6 +131,7 @@
       this.$carousel_tabpanels.parent().closest('div').addClass('ui-carousel-tabpanel-wrapper');
       this.$carousel_tabpanels.parent().closest('div').parent().addClass('ui-carousel-mask');
       this.$carousel_tabpanel_content_imgs.addClass('ui-carousel-image');
+      this.$carousel_tabpanel_content_videos.addClass('ui-carousel-video');
     },
 
     'settingSliding': function() {
@@ -153,10 +158,10 @@
       }
 
       // Set carousel tabpanel wrapper width
-      $tabpanel_wrapper.width(($tabpanel.width() + this.carousel_content_margin) * $tabpanel.length);
+      $tabpanel_wrapper.width(($tabpanel.width() + this.carousel_content_margin) * ($tabpanel.length + 1));
 
       // Set carousel one tab mask width
-      this.carousel_one_tab_mask_width = ($tabpanel.width() + this.carousel_content_margin) * this.carousel_count;
+      this.carousel_one_tab = ($tabpanel.width() + this.carousel_content_margin) * this.carousel_count;
 
       if(this.start_tabpanel_index !== null) {
         for(var i = 0, l = this.start_tabpanel_index + 1; i < l; i++) {
@@ -166,12 +171,7 @@
 
       // tabpanel wrapper 위치 초기화
       if(this.carousel_infinite === true) {
-        // console.log(this.carousel_one_tab_mask_width);
-        $tabpanel_wrapper.css('left', -this.carousel_one_tab_mask_width);
-        if(global.innerWidth <= 750) {
-          this.carousel_one_tab_mask_width -= 34;
-          $tabpanel_wrapper.css('left', -this.carousel_one_tab_mask_width);
-        }
+        $tabpanel_wrapper.css('left', -this.carousel_one_tab);
       }
 
       // tabpanel active 상태 초기화
@@ -187,13 +187,16 @@
       var $tabs     = widget.$carousel_tabs;
       var $buttons  = widget.$carousel_button_group.children();
       // buttons event
-      $buttons.on('click', function() {
-        if ( this.className === 'ui-carousel-prev-button' ) {
-          widget.prevPanel();
-        } else {
-          widget.nextPanel();
-        }
-      });
+      // if(this.animating === false) {
+        $buttons.on('click', function() {
+          if ( this.className === 'ui-carousel-prev-button' ) {
+            // this.animating = true;
+            widget.prevPanel();
+          } else {
+            widget.nextPanel();
+          }
+        });
+      // }
 
       // tabs event
       $.each($tabs, function(index) {
@@ -214,7 +217,6 @@
       // 사용자가 클릭을 하는 행위가 발생하면 이벤트 객체를 받기 때문에
       // 조건 확인을 통해 브라우저의 기본 동작 차단
       if (e) { e.preventDefault(); }
-      // var animaiting = true;
 
       // 활성화된 인덱스를 사용자가 클릭한 인덱스로 변경
       this.active_index = index;
@@ -234,14 +236,14 @@
       }
 
       var $carousel_wrapper = this.$carousel_tabpanels.eq(this.active_index).parent();
-      var one_width = this.carousel_one_tab_mask_width;
+      var one_width = this.carousel_one_tab;
 
       // Infinite Carousel
       if(this.carousel_infinite === true) {
         // When you click next btn
         if(btn === 'next') {
           $carousel_wrapper.stop().animate({
-            'left': -this.carousel_one_tab_mask_width * 2 //- 34
+            'left': -one_width * 2
           }, 600, 'easeOutExpo', function() {
             $carousel_wrapper.append($carousel_wrapper.children().first());
             $carousel_wrapper.css('left', -one_width);
@@ -259,7 +261,7 @@
         }
       } else if(this.carousel_infinite === false) {
         this.$carousel_tabpanels.eq(this.active_index).parent().stop().animate({
-          'left': this.active_index * -this.carousel_one_tab_mask_width
+          'left': this.active_index * -this.carousel_one_tab
         }, 600, 'easeOutExpo');
       }
 
