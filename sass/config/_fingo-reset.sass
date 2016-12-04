@@ -1,0 +1,35 @@
+/*! fingo-reset.sass © heoyunjee, 2016 */
+// @import ./config/fingo-colors
+
+// 컨테이너(.container) 너비
+$m-container-width: 640px
+$t-container-width: 964px
+$d-container-width: 1240px
+
+$bp-mobile: 750px
+$bp-tablet: 1024px
+
+// * ------------------------------------------------
+// * Reset Component
+// * ------------------------------------------------
+button
+  transition: all 0.2s ease-in-out
+  @extend %reset-button
+a
+  transition: all 0.2s ease-in-out
+
+body
+  font-family: 'Spoqa Han Sans', 'Sans-serif'
+  +size(100% auto)
+
+
+// * ------------------------------------------------
+// * Main page - Container
+// * ------------------------------------------------
+.container
+  +size(1240px auto)
+  +margin(0 auto)
+  +tablet
+    width: percentage($t-container-width/$bp-tablet)
+  +mobile
+    width: percentage($m-container-width/$bp-mobile)
